@@ -210,8 +210,8 @@ nav.scrolled{background:rgba(0,0,0,0.95);border-bottom-color:rgba(255,255,255,0.
 .contact-wrap .section-header{text-align:center;}
 .contact-wrap .section-label{justify-content:center;}
 .contact-wrap .section-desc{margin:1.2rem auto 0;}
-.contact-methods{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:3.5rem;}
-.contact-pill{display:flex;align-items:center;gap:1rem;padding:clamp(1rem,2vw,1.2rem) clamp(1.5rem,3vw,2rem);border:2px solid rgba(255,255,255,0.2);text-decoration:none;color:var(--grey-200);font-family:'Syne',sans-serif;font-size:clamp(0.85rem,1.8vw,0.95rem);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
+.contact-methods{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;}
+.contact-pill{display:inline-flex;align-items:center;gap:0.6rem;padding:0.6rem 1.2rem;border:1px solid rgba(255,255,255,0.2);text-decoration:none;color:var(--grey-200);font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);white-space:nowrap;}
 .contact-pill:hover{border-color:var(--white);background:var(--white);transform:translateY(-5px) scale(1.05);color:var(--black);}
 .contact-pill i{font-size:clamp(1.1rem,2.2vw,1.2rem);transition:color 0.3s;}
 .social-row{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem;}
@@ -261,8 +261,6 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
   .hero-stats{gap:1.5rem;}
   .global-container{flex-direction:column;text-align:center;gap:2rem;}
   .global-subtitle{margin:0 auto;}
-  .contact-methods{flex-direction:column;align-items:stretch;}
-  .contact-pill{justify-content:center;}
   .exp-header{flex-direction:column;gap:0.8rem;}
   .project-metrics{grid-template-columns:1fr 1fr;}
   .modal-close{top:1rem;right:1rem;width:40px;height:40px;}
@@ -548,7 +546,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     <!-- Project 4: Meeting Intelligence -->
     <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
       <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
-        <img src="AI-MEETING-ASSISTANT.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+        <img src="AI-MEETING.avif" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
       </div>
       <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem) clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
         <div>
@@ -576,9 +574,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     </div>
 
     <!-- Project 5: Network Multi-Agent -->
-    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
-      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);display:flex;align-items:center;justify-content:center;">
-        <span style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);">ADD PROJECT IMAGE</span>
+     <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="Network.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
       </div>
       <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem) clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
         <div>
@@ -599,29 +597,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
       </div>
     </div>
 
-    <!-- Project 6: ZenChat -->
-    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
-      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);display:flex;align-items:center;justify-content:center;">
-        <span style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);">ADD PROJECT IMAGE</span>
-      </div>
-      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem) clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
-        <div>
-          <div class="project-category"><i class="fas fa-comments"></i> Generative AI · Voice</div>
-          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.9rem,2vw,1.15rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">ZenChat — Voice AI Assistant</h3>
-          <p style="font-size:0.82rem;color:var(--grey-600);line-height:1.75;margin-bottom:1rem;padding:0.8rem;background:var(--off-white);border-left:3px solid var(--black);">
-            Real-time speech-to-text with streaming LLM output, context-aware session memory, and low-latency voice interactions.
-          </p>
-          <div class="project-tech">
-            <span class="tech-badge">LangChain</span>
-            <span class="tech-badge">OpenAI</span>
-            <span class="tech-badge">Whisper</span>
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">FastAPI</span>
-          </div>
-        </div>
-        <a href="https://github.com/manobhisriram/ZenChat" target="_blank" class="project-link" style="margin-top:1.2rem;align-self:flex-start;">View on GitHub <i class="fab fa-github"></i></a>
-      </div>
-    </div>
+    
 
   </div>
 </section>
@@ -825,14 +801,14 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
         <div class="cert-body">
           <div class="cert-name">Azure AI Developer Associate</div>
-          <div class="cert-issuer">Microsoft Certified · 2024</div>
+          <div class="cert-issuer">Microsoft Certified · 2026</div>
         </div>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="fab fa-aws"></i></div>
         <div class="cert-body">
           <div class="cert-name">AWS Certified Cloud Practitioner</div>
-          <div class="cert-issuer">Amazon Web Services · 2024</div>
+          <div class="cert-issuer">Amazon Web Services · 2023</div>
         </div>
       </div>
       <div class="cert-card">
@@ -846,9 +822,10 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
   </div>
 </section>
 
-<div class="ink-break" style="background:var(--off-black);">
-  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,0 L1440,0 L1440,28 C1320,10 1180,40 1020,20 C870,2 720,38 570,22 C420,6 280,34 140,18 C60,8 10,26 0,20 Z" fill="#000000"/>
+<div style="background:var(--off-black);padding:0;margin:0;line-height:0;overflow:hidden;">
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),rgba(255,255,255,0.9),rgba(255,255,255,0.5),transparent);margin-bottom:0;"></div>
+  <svg viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:50px;">
+    <path d="M0,0 L1440,0 L1440,38 C1320,14 1180,48 1020,28 C870,8 720,46 570,26 C420,6 280,44 140,22 C60,10 10,32 0,24 Z" fill="#000000"/>
   </svg>
 </div>
 
@@ -887,14 +864,14 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
 </div>
 
 <!-- ═══ CONTACT ═══ -->
-<section class="section-black" id="contact">
+<section class="section-black" id="contact" style="padding-bottom:3rem;"></section>
   <div class="contact-wrap">
     <div class="section-header">
       <div class="section-label"><span class="line"></span> Contact</div>
       <h2 class="section-title">Let's Build<br><em>Something Real</em></h2>
       <p class="section-desc">Looking for roles where evaluation-driven AI engineering is the standard, not the exception. Best fit for teams building production Agentic AI or LLM-powered products that need to work reliably at scale. If hallucination rate, eval pipelines, and production observability matter to your team — that is exactly where I work best.</p>
     </div>
-    <div class="contact-methods">
+    <div class="contact-methods" style="margin-top:2.5rem;"></div>
       <a href="mailto:manobhisriram@gmail.com" class="contact-pill">
         <i class="fas fa-envelope"></i><span>manobhisriram@gmail.com</span>
       </a>
@@ -905,10 +882,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
       </a>
     </div>
-    <div class="social-row">
-      <a href="https://github.com/manobhisriram" class="social-ico" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/manobhi-sriram" class="social-ico" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+    
   </div>
 </section>
 
@@ -920,9 +894,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
       <a href="#tech" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Tech Stack</a>
       <a href="#contact" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Contact</a>
     </div>
-    <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:1.5rem;">
-      <a href="https://github.com/manobhisriram" target="_blank" class="social-ico"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/manobhi-sriram" target="_blank" class="social-ico"><i class="fab fa-linkedin"></i></a>
+    <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;">
+      <a href="https://github.com/manobhisriram" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:1rem;"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/manobhi-sriram" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:1rem;"><i class="fab fa-linkedin"></i></a>
     </div>
     <p class="footer-text">© 2026 Manobhi Sriram — AI Engineer · Agentic AI Systems · LLM Orchestration</p>
   </div>
@@ -1259,15 +1233,25 @@ if(heroCanvas&&typeof THREE!=='undefined'){
     renderer.setSize(window.innerWidth,window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
     camera.position.z=5;
+    const dotCanvas=document.createElement('canvas');
+    dotCanvas.width=16;dotCanvas.height=16;
+    const ctx2d=dotCanvas.getContext('2d');
+    const grad=ctx2d.createRadialGradient(8,8,0,8,8,8);
+    grad.addColorStop(0,'rgba(255,255,255,1)');
+    grad.addColorStop(0.4,'rgba(255,255,255,0.8)');
+    grad.addColorStop(1,'rgba(255,255,255,0)');
+    ctx2d.fillStyle=grad;
+    ctx2d.beginPath();ctx2d.arc(8,8,8,0,Math.PI*2);ctx2d.fill();
+    const dotTex=new THREE.CanvasTexture(dotCanvas);
     const geo=new THREE.BufferGeometry();
-    const count=window.innerWidth<768?400:800;
+    const count=window.innerWidth<768?500:1000;
     const pos=new Float32Array(count*3);
-    for(let i=0;i<count*3;i++)pos[i]=(Math.random()-0.5)*15;
+    for(let i=0;i<count*3;i++)pos[i]=(Math.random()-0.5)*20;
     geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
-    const mat=new THREE.PointsMaterial({size:window.innerWidth<768?0.015:0.02,color:0xffffff,transparent:true,opacity:0.6});
+    const mat=new THREE.PointsMaterial({size:0.06,map:dotTex,color:0xffffff,transparent:true,opacity:0.45,sizeAttenuation:true,depthWrite:false,alphaTest:0.01});
     const mesh=new THREE.Points(geo,mat);
     scene.add(mesh);
-    function animHero(){requestAnimationFrame(animHero);mesh.rotation.y+=0.0005;mesh.rotation.x+=0.0003;renderer.render(scene,camera);}
+    function animHero(){requestAnimationFrame(animHero);mesh.rotation.y+=0.0002;mesh.rotation.x+=0.00008;renderer.render(scene,camera);}
     animHero();
     window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
   }catch(e){console.log('Hero canvas error:',e);}
