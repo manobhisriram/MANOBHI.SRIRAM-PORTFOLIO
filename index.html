@@ -296,7 +296,8 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
       <li><a href="#tech">Tech Stack</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    <a href="ManobhiSriram_Resume.pdf" target="_blank" class="btn btn-white" style="padding:0.5rem 1.2rem;font-size:0.7rem;letter-spacing:0.14em;">Resume <i class="fas fa-download"></i></a>
+<button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
 
@@ -308,13 +309,14 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
       <div class="dot"></div>
       <span>AI Engineer &nbsp;•&nbsp; Agentic AI Systems &nbsp;•&nbsp; LLM Orchestration</span>
     </div>
-    <h1>Agentic AI<br>Systems That<br><em>Ship to Prod</em></h1>
+    <h1>Agentic AI<br>Systems That<br><em>Ship to Production</em></h1>
     <p class="hero-sub">
       AI Engineer at <strong>Ascendion</strong> — sole AI technical lead on two enterprise platforms serving <strong>1,500+ employees across 12 countries</strong>. Specialising in LangGraph multi-agent orchestration, production RAG pipelines, and LLM evaluation frameworks that catch regressions before they reach users.
     </p>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-white">View My Work <i class="fas fa-arrow-down"></i></a>
-      <a href="#contact" class="btn btn-outline">Get In Touch <i class="fas fa-arrow-right"></i></a>
+      <a href="#projects" class="btn btn-outline">View Projects <i class="fas fa-arrow-right"></i></a>
+<a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.15);">Get In Touch <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -342,6 +344,26 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     <path d="M0,0 L1440,0 L1440,28 C1300,42 1180,10 1050,30 C900,52 780,8 650,28 C520,48 380,12 250,30 C120,48 60,18 0,32 Z" fill="#0a0a0a"/>
   </svg>
 </div>
+
+<section style="background:var(--off-black);padding:clamp(3rem,8vw,5rem) 6%;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1320px;margin:0 auto;display:flex;gap:clamp(2rem,6vw,6rem);align-items:flex-start;flex-wrap:wrap;">
+    <div style="flex:1;min-width:min(100%,320px);">
+      <div class="section-label" style="color:var(--grey-400);margin-bottom:1.2rem;"><span class="line"></span> About</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1.5rem,4vw,2.8rem);font-weight:900;color:var(--white);line-height:1.1;text-transform:uppercase;margin-bottom:1.8rem;">The Engineer<br><em style="font-style:italic;font-weight:400;background:linear-gradient(120deg,var(--white),var(--grey-400),var(--white));background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Behind the Systems</em></h2>
+    </div>
+    <div style="flex:2;min-width:min(100%,380px);">
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-200);line-height:1.95;margin-bottom:1.4rem;">
+        I build AI systems that have to work — not demos, not prototypes, not proof-of-concepts that never see users. My focus is on the full stack of production AI: agent orchestration, retrieval quality, evaluation frameworks, and the observability layer that tells you when something breaks before your users do.
+      </p>
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-400);line-height:1.95;margin-bottom:1.4rem;">
+        At Ascendion, I have been the sole AI technical lead on both enterprise platforms — which means I own every decision, from architecture to compliance to the demo in front of directors. That kind of end-to-end ownership is where I do my best work.
+      </p>
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-400);line-height:1.95;">
+        I care deeply about LLM evaluation — not as a checkbox but as an engineering discipline. If a system can hallucinate its way past a user, it is not production-ready. That conviction shows up in every project I ship.
+      </p>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ EXPERIENCE ═══ -->
 <section class="experience-section" id="experience">
@@ -423,6 +445,11 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
 
   <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:2rem;">
 
+  <!-- Sub-label: Production -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--grey-600);padding-bottom:0.8rem;border-bottom:2px solid rgba(0,0,0,0.12);margin-bottom:0.5rem;">
+    <i class="fas fa-building" style="margin-right:0.6rem;"></i> Production — Ascendion (Enterprise)
+  </div>
+
     <!-- Project 1: AI Media Intelligence -->
     <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
       <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
@@ -482,6 +509,11 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <a href="#" class="project-link" style="margin-top:1.2rem;align-self:flex-start;" onclick="openModal('modal-mobility');return false;">View Case Study <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
+
+    <!-- Sub-label: Personal Projects -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--grey-600);padding-bottom:0.8rem;border-bottom:2px solid rgba(0,0,0,0.12);margin:1rem 0 0.5rem;">
+    <i class="fas fa-code" style="margin-right:0.6rem;"></i> Personal Projects
+  </div>
 
     <!-- Project 3: MedAssist -->
     <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
@@ -552,13 +584,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <div>
           <div class="project-category"><i class="fas fa-network-wired"></i> Multi-Agent · Automation</div>
           <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.9rem,2vw,1.15rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">Network Troubleshooting Multi-Agent</h3>
-          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">Autonomous multi-agent system for network diagnostics and root-cause analysis — agents collaborate to run diagnostics, identify failure patterns, and generate remediation plans without manual intervention.</p>
-          <div class="project-metrics">
-            <div class="proj-metric"><div class="proj-metric-val">Multi</div><div class="proj-metric-label">Agent Architecture</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Auto</div><div class="proj-metric-label">Root Cause Analysis</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Zero</div><div class="proj-metric-label">Manual Intervention</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Real</div><div class="proj-metric-label">Time Diagnostics</div></div>
-          </div>
+          <p style="font-size:0.82rem;color:var(--grey-600);line-height:1.75;margin-bottom:1rem;padding:0.8rem;background:var(--off-white);border-left:3px solid var(--black);">
+            Autonomous multi-agent system — agents collaborate for diagnostics, root-cause analysis, and remediation planning with zero manual intervention.
+          </p>
           <div class="project-tech">
             <span class="tech-badge">LangGraph</span>
             <span class="tech-badge">LangChain</span>
@@ -580,13 +608,9 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <div>
           <div class="project-category"><i class="fas fa-comments"></i> Generative AI · Voice</div>
           <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.9rem,2vw,1.15rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">ZenChat — Voice AI Assistant</h3>
-          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">Conversational AI assistant with voice input, real-time speech-to-text, and LLM-powered responses — designed for natural, low-latency voice interactions with streaming output and context-aware memory.</p>
-          <div class="project-metrics">
-            <div class="proj-metric"><div class="proj-metric-val">Real</div><div class="proj-metric-label">Time STT</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Stream</div><div class="proj-metric-label">Output</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Context</div><div class="proj-metric-label">Memory</div></div>
-            <div class="proj-metric"><div class="proj-metric-val">Low</div><div class="proj-metric-label">Latency</div></div>
-          </div>
+          <p style="font-size:0.82rem;color:var(--grey-600);line-height:1.75;margin-bottom:1rem;padding:0.8rem;background:var(--off-white);border-left:3px solid var(--black);">
+            Real-time speech-to-text with streaming LLM output, context-aware session memory, and low-latency voice interactions.
+          </p>
           <div class="project-tech">
             <span class="tech-badge">LangChain</span>
             <span class="tech-badge">OpenAI</span>
@@ -653,6 +677,11 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
       <h3>Cloud & Production Infra</h3>
       <p>AWS (EC2, S3, Bedrock, CloudWatch, IAM), Azure, Docker, CI/CD via GitHub Actions, FastAPI microservices, and production ML observability with end-to-end tracing.</p>
     </div>
+  </div>
+  <div style="max-width:1320px;margin:2.5rem auto 0;text-align:right;">
+    <a href="#projects" style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-400);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8A8A8A'">
+      See how I applied these in projects <i class="fas fa-arrow-right"></i>
+    </a>
   </div>
 </section>
 
@@ -863,7 +892,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     <div class="section-header">
       <div class="section-label"><span class="line"></span> Contact</div>
       <h2 class="section-title">Let's Build<br><em>Something Real</em></h2>
-      <p class="section-desc">Open to senior AI engineering roles at AI-native startups, product companies, and founding engineer opportunities where I can own AI systems end-to-end.</p>
+      <p class="section-desc">Looking for roles where evaluation-driven AI engineering is the standard, not the exception. Best fit for teams building production Agentic AI or LLM-powered products that need to work reliably at scale. If hallucination rate, eval pipelines, and production observability matter to your team — that is exactly where I work best.</p>
     </div>
     <div class="contact-methods">
       <a href="mailto:manobhisriram@gmail.com" class="contact-pill">
@@ -884,7 +913,19 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
 </section>
 
 <footer>
-  <p class="footer-text">© 2026 Manobhi Sriram — AI Engineer · Agentic AI Systems · LLM Orchestration</p>
+  <div style="max-width:1320px;margin:0 auto;">
+    <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+      <a href="#experience" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Experience</a>
+      <a href="#projects" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Projects</a>
+      <a href="#tech" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Tech Stack</a>
+      <a href="#contact" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Contact</a>
+    </div>
+    <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:1.5rem;">
+      <a href="https://github.com/manobhisriram" target="_blank" class="social-ico"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/manobhi-sriram" target="_blank" class="social-ico"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="footer-text">© 2026 Manobhi Sriram — AI Engineer · Agentic AI Systems · LLM Orchestration</p>
+  </div>
 </footer>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -898,7 +939,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     <div class="modal-tag"><span class="line"></span> Enterprise AI · Production · Ascendion</div>
     <h1 class="modal-title">AI Media Intelligence Platform</h1>
     <p class="modal-subtitle">Multi-model facial recognition and semantic vector search platform deployed company-wide at Ascendion — indexes enterprise event photos across 1,500+ employees globally, enabling instant identity-based retrieval and replacing an entire manual image processing workforce.</p>
-    <div class="modal-image"><div class="modal-image-placeholder">ADD PROJECT SCREENSHOT / DEMO IMAGE</div></div>
+    <div class="modal-image"><div class="modal-image-placeholder" style="font-size:0.7rem;line-height:1.8;text-align:center;padding:1rem;">Screenshots withheld — proprietary enterprise system.<br>Architecture walkthrough available on request.</div></div>
     <div class="modal-metrics-grid">
       <div class="modal-metric"><div class="modal-metric-val">97.3%</div><div class="modal-metric-label">Match Accuracy</div></div>
       <div class="modal-metric"><div class="modal-metric-val">0.4s</div><div class="modal-metric-label">Retrieval Time (was 8 min)</div></div>
@@ -952,6 +993,11 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <span class="modal-stack-badge">Prompt Engineering</span>
       </div>
     </div>
+    <div style="margin-top:2rem;padding:1rem 1.5rem;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--grey-400);">
+        <i class="fas fa-lock" style="margin-right:0.6rem;"></i> Codebase is proprietary to Ascendion. Architecture walkthrough available on request.
+      </p>
+    </div>
   </div>
 </div>
 
@@ -962,7 +1008,7 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
     <div class="modal-tag"><span class="line"></span> Agentic AI · Production · Ascendion · 12 Countries</div>
     <h1 class="modal-title">Leadership Mobility Command Center</h1>
     <p class="modal-subtitle">LangGraph multi-agent platform for fully autonomous executive travel coordination across Ascendion's global operations — tracks live flight telemetry, optimises ground routes, broadcasts real-time updates, and manages driver dispatch end-to-end with zero manual intervention. Now Ascendion's global standard operating platform.</p>
-    <div class="modal-image"><div class="modal-image-placeholder">ADD PROJECT SCREENSHOT / DEMO IMAGE</div></div>
+    <div class="modal-image"><div class="modal-image-placeholder" style="font-size:0.7rem;line-height:1.8;text-align:center;padding:1rem;">Screenshots withheld — proprietary enterprise system.<br>Architecture walkthrough available on request.</div></div>
     <div class="modal-metrics-grid">
       <div class="modal-metric"><div class="modal-metric-val">12</div><div class="modal-metric-label">Countries Deployed</div></div>
       <div class="modal-metric"><div class="modal-metric-val">1,500+</div><div class="modal-metric-label">Employees Served</div></div>
@@ -1018,6 +1064,11 @@ footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);pa
         <span class="modal-stack-badge">Python</span>
       </div>
     </div>
+    <div style="margin-top:2rem;padding:1rem 1.5rem;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--grey-400);">
+    <i class="fas fa-lock" style="margin-right:0.6rem;"></i> Codebase is proprietary to Ascendion. Architecture walkthrough available on request.
+  </p>
+</div>
   </div>
 </div>
 
