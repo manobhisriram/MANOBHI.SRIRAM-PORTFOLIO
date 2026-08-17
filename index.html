@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manobhi Sriram — AI Engineer | Agentic AI Systems | LLM Orchestration</title>
+<meta name="description" content="AI Engineer with production Agentic AI systems serving 5,000+ employees across 12 countries. Specializing in LangGraph multi-agent orchestration, RAG pipelines, LLM evaluation, and enterprise AI deployment.">
+<meta name="keywords" content="AI Engineer, Agentic AI, LangGraph, RAG, LLM Orchestration, Multi-Agent Systems, Generative AI, LLM Engineer, Production AI, FastAPI, Pinecone, LangChain, LLM Evaluation, Ragas, DeepEval, MCP Server, AutoGen, CrewAI, LLMOps, Langfuse, Datadog">
+<meta name="author" content="Manobhi Sriram">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manobhi Sriram — AI Engineer | Agentic AI & LLM Systems">
+<meta property="og:description" content="AI Engineer with production Agentic AI systems serving 5,000+ employees across 12 countries at Ascendion.">
+<meta property="og:url" content="https://manobhi-sriram-portfolio.vercel.app/">
+<link rel="canonical" href="https://manobhi-sriram-portfolio.vercel.app/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manobhi Sriram",
+  "url": "https://manobhi-sriram-portfolio.vercel.app/",
+  "jobTitle": "AI Engineer",
+  "worksFor": {"@type": "Organization", "name": "Ascendion"},
+  "description": "AI Engineer specializing in Agentic AI systems, LLM orchestration, RAG pipelines, and production ML deployment.",
+  "sameAs": ["https://github.com/manobhisriram","https://linkedin.com/in/manobhi-sriram"],
+  "knowsAbout": ["Agentic AI","LangGraph","RAG","LLM Orchestration","Multi-Agent Systems","LLM Evaluation","Generative AI","MLOps","MCP Server Development","LLMOps","Fine-Tuning"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<style>
+:root {
+  --black: #000000;
+  --off-black: #0a0a0a;
+  --white: #FFFFFF;
+  --off-white: #F5F5F3;
+  --grey-100: #E8E8E8;
+  --grey-200: #C8C8C8;
+  --grey-400: #8A8A8A;
+  --grey-600: #5A5A5A;
+  --grey-800: #2A2A2A;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Syne',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 1 L26 16 L14 18 L18 30 Z' fill='rgba(255,255,255,0.85)' stroke='rgba(255,255,255,0.9)' stroke-width='1'/%3E%3C/svg%3E") 4 4, auto;}
+a,button,.btn{cursor:pointer;}
+
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--white),var(--grey-400));z-index:9999;box-shadow:0 0 20px rgba(255,255,255,0.5);}
+
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");opacity:.03;pointer-events:none;z-index:9998;animation:grain 8s steps(10) infinite;}
+@keyframes grain{0%,100%{transform:translate(0,0);}10%{transform:translate(-5%,-10%);}30%{transform:translate(3%,-15%);}50%{transform:translate(12%,9%);}70%{transform:translate(9%,4%);}90%{transform:translate(-1%,7%);}}
+
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:1.4rem 6%;background:rgba(0,0,0,0.85);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.08);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
+nav.scrolled{background:rgba(0,0,0,0.95);border-bottom-color:rgba(255,255,255,0.15);box-shadow:0 10px 40px rgba(0,0,0,0.5);}
+.nav-container{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:'Orbitron',sans-serif;font-size:clamp(1.1rem,3vw,1.4rem);font-weight:900;color:var(--white);letter-spacing:0.1em;text-transform:uppercase;}
+.logo span{color:var(--grey-400);font-weight:400;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--grey-400);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;transition:all 0.3s;position:relative;padding:5px 0;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--white);transition:width 0.4s cubic-bezier(0.4,0,0.2,1);}
+.nav-links a:hover{color:var(--white);}
+.nav-links a:hover::after{width:100%;}
+.mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.4rem;cursor:pointer;z-index:1001;}
+
+.hero{min-height:100vh;display:flex;align-items:center;background:var(--black);padding:7rem 8% 5rem 6%;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 70% 80%,rgba(255,255,255,0.03) 0%,transparent 50%);animation:float 20s ease-in-out infinite;z-index:1;}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-30px) scale(1.1);}66%{transform:translate(-20px,20px) scale(0.9);}}
+#hero-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+.hero-container{max-width:1320px;margin:0 auto;width:100%;position:relative;z-index:2;overflow:visible;}
+.hero-badge{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:2.2rem;padding:0.6rem 1.2rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);opacity:0;animation:fadeInUp 1s ease forwards 0.2s;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.hero-badge .dot{width:8px;height:8px;background:var(--white);border-radius:50%;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 10px var(--white);}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.2);}}
+.hero-badge span{font-family:'JetBrains Mono',monospace;font-size:clamp(0.6rem,1.5vw,0.72rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(2rem,6.5vw,5.5rem);font-weight:900;line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:2rem;opacity:0;animation:fadeInUp 1s ease forwards 0.4s;overflow:visible;}
+.hero h1 em{font-style:italic;font-weight:400;background:linear-gradient(120deg,var(--white),var(--grey-200),var(--white));background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3s linear infinite;display:inline-block;padding-right:0.25em;overflow:visible;}
+@keyframes shimmer{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
+.hero-sub{font-family:'Syne',sans-serif;font-size:clamp(0.95rem,2vw,1.15rem);color:var(--grey-400);max-width:620px;line-height:1.9;margin-bottom:3rem;font-weight:400;opacity:0;animation:fadeInUp 1s ease forwards 0.6s;}
+.hero-sub strong{color:var(--white);}
+.hero-cta{display:flex;gap:1.2rem;flex-wrap:wrap;opacity:0;animation:fadeInUp 1s ease forwards 0.8s;}
+
+.btn{padding:clamp(0.8rem,2vw,1rem) clamp(1.5rem,3vw,2.5rem);font-family:'JetBrains Mono',monospace;font-size:clamp(0.7rem,1.5vw,0.78rem);letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:0.6rem;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;position:relative;overflow:hidden;}
+.btn::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,0.2);border-radius:50%;transform:translate(-50%,-50%);transition:width 0.6s,height 0.6s;}
+.btn:hover::before{width:300px;height:300px;}
+.btn-white{background:var(--white);color:var(--black);box-shadow:0 0 20px rgba(255,255,255,0.3);}
+.btn-white:hover{background:var(--grey-100);transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,255,255,0.4);}
+.btn-outline{background:transparent;color:var(--grey-200);border:2px solid rgba(255,255,255,0.3);}
+.btn-outline:hover{border-color:var(--white);color:var(--white);transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,255,255,0.2);}
+
+.hero-stats{display:flex;gap:clamp(2rem,5vw,4rem);margin-top:5rem;opacity:0;animation:fadeInUp 1s ease forwards 1s;flex-wrap:wrap;}
+.stat-item{position:relative;padding-left:1.5rem;border-left:2px solid rgba(255,255,255,0.3);transition:all 0.3s;}
+.stat-item:hover{border-left-color:var(--white);transform:translateX(5px);}
+.stat-num{font-family:'Orbitron',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--white);line-height:1;}
+.stat-label{font-family:'JetBrains Mono',monospace;font-size:clamp(0.62rem,1.5vw,0.7rem);letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-400);margin-top:0.5rem;}
+
+.section-white{background:var(--off-white);color:var(--black);padding:clamp(4rem,10vw,8rem) 6%;position:relative;overflow:hidden;}
+.section-black{background:var(--black);color:var(--white);padding:clamp(4rem,10vw,6rem) 6%;}
+.section-header{margin-bottom:clamp(3rem,8vw,5rem);position:relative;overflow:visible;padding-right:2rem;}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:clamp(0.65rem,1.5vw,0.75rem);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;opacity:0.7;}
+.section-label .line{width:40px;height:2px;background:currentColor;}
+.section-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,3.8vw,3.2rem);font-weight:900;letter-spacing:-0.02em;line-height:1.25;text-transform:uppercase;overflow:visible;word-break:break-word;}
+.section-title em{font-style:italic;font-weight:400;background:linear-gradient(120deg,currentColor,var(--grey-400),currentColor);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;line-height:1.3;padding-bottom:0.15em;padding-right:0.2em;overflow:visible;}
+.section-desc{font-size:clamp(0.95rem,2vw,1.05rem);line-height:1.9;max-width:640px;margin-top:1.2rem;font-weight:400;opacity:0.8;}
+
+.experience-section{background:var(--off-black);padding:clamp(4rem,10vw,8rem) 6%;}
+.experience-inner{max-width:1320px;margin:0 auto;}
+.exp-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);padding:clamp(2rem,4vw,3.5rem);margin-bottom:2.5rem;position:relative;overflow:hidden;transition:all 0.4s;}
+.exp-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--white);}
+.exp-card:hover{background:rgba(255,255,255,0.06);transform:translateX(4px);}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;margin-bottom:0.8rem;}
+.exp-company{font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.5vw,1.4rem);font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.05em;}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.15em;color:var(--grey-400);padding:0.4rem 1rem;border:1px solid rgba(255,255,255,0.2);white-space:nowrap;}
+.exp-role{font-family:'Syne',sans-serif;font-size:clamp(0.9rem,2vw,1rem);color:var(--grey-200);margin-bottom:2rem;font-weight:600;}
+.exp-projects{display:grid;gap:2rem;}
+.exp-project-title{font-family:'Orbitron',sans-serif;font-size:clamp(0.75rem,1.6vw,0.88rem);font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(255,255,255,0.1);line-height:1.4;}
+.exp-bullets{list-style:none;display:grid;gap:0.9rem;}
+.exp-bullets li{font-size:clamp(0.83rem,1.7vw,0.92rem);color:var(--grey-200);line-height:1.8;padding-left:1.5rem;position:relative;}
+.exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--white);font-size:0.75rem;}
+.exp-bullets li strong{color:var(--white);}
+.exp-metrics{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);}
+.exp-metric{text-align:center;}
+.exp-metric-val{font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:900;color:var(--white);}
+.exp-metric-label{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;color:var(--grey-400);text-transform:uppercase;margin-top:0.3rem;}
+
+.projects-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:2.5rem;}
+.project-card{background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);position:relative;}
+.project-card:hover{transform:translateY(-15px);box-shadow:0 30px 80px rgba(0,0,0,0.25);border-color:var(--black);}
+.project-image{width:100%;height:240px;background:linear-gradient(135deg,var(--grey-100),var(--grey-200));overflow:hidden;position:relative;}
+.project-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);}
+.project-card:hover .project-image img{transform:scale(1.12);filter:grayscale(0);}
+.project-image-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:rgba(255,255,255,0.2);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;}
+.project-content{padding:clamp(1.5rem,3vw,2.5rem) clamp(1.2rem,2.5vw,2rem);}
+.project-category{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;color:var(--grey-600);text-transform:uppercase;margin-bottom:1rem;font-weight:600;display:flex;align-items:center;gap:0.5rem;}
+.project-card h3{font-family:'Orbitron',sans-serif;font-size:clamp(0.9rem,2vw,1.1rem);font-weight:700;color:var(--black);margin-bottom:0.8rem;line-height:1.3;text-transform:uppercase;}
+.project-card .project-desc{font-size:clamp(0.82rem,1.7vw,0.9rem);color:var(--grey-600);line-height:1.8;margin-bottom:1.2rem;}
+.project-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;margin-bottom:1.5rem;}
+.proj-metric{background:var(--off-white);padding:0.8rem;border-left:3px solid var(--black);}
+.proj-metric-val{font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1rem);font-weight:900;color:var(--black);}
+.proj-metric-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:var(--grey-600);text-transform:uppercase;margin-top:0.2rem;}
+.project-tech{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(0,0,0,0.1);}
+.tech-badge{padding:0.35rem 0.8rem;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;background:var(--black);color:var(--white);text-transform:uppercase;transition:all 0.3s;}
+.tech-badge:hover{background:var(--grey-800);transform:translateY(-2px);}
+.project-link{display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.5rem;padding:0.75rem 1.4rem;background:var(--black);color:var(--white);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.3s;border:2px solid var(--black);}
+.project-link:hover{background:transparent;color:var(--black);}
+
+.capabilities-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:2px;background:rgba(255,255,255,0.1);}
+.cap-card{background:var(--black);padding:clamp(1.5rem,3vw,2rem) clamp(1.3rem,2.5vw,1.8rem);position:relative;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);overflow:hidden;}
+.cap-card:hover{background:var(--grey-800);transform:translateY(-8px);}
+.cap-card .cap-number{font-family:'Orbitron',sans-serif;font-size:clamp(2rem,4vw,2.5rem);font-weight:900;color:rgba(255,255,255,0.05);line-height:1;margin-bottom:1rem;}
+.cap-card .cap-icon{font-size:clamp(1.1rem,2.2vw,1.3rem);color:var(--white);margin-bottom:1rem;}
+.cap-card h3{font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,0.95rem);font-weight:700;color:var(--white);margin-bottom:0.6rem;text-transform:uppercase;}
+.cap-card p{font-size:clamp(0.78rem,1.6vw,0.85rem);color:var(--grey-400);line-height:1.7;}
+
+.tech-inner{max-width:1320px;margin:0 auto;}
+.tech-row{margin-bottom:3.5rem;}
+.tech-row-label{font-family:'JetBrains Mono',monospace;font-size:clamp(0.7rem,1.5vw,0.75rem);letter-spacing:0.25em;text-transform:uppercase;color:var(--grey-600);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:2px solid rgba(0,0,0,0.15);display:flex;align-items:center;gap:0.8rem;font-weight:600;}
+.tech-row-label i{font-size:clamp(1rem,2vw,1.1rem);color:var(--black);}
+.tech-tags{display:flex;flex-wrap:wrap;gap:1rem;}
+.tech-tag{display:flex;align-items:center;gap:0.8rem;padding:clamp(0.7rem,1.5vw,0.9rem) clamp(1rem,2vw,1.4rem);border:2px solid rgba(0,0,0,0.15);background:var(--white);cursor:pointer;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),box-shadow 0.35s,background-color 0.35s,border-color 0.35s;}
+.tech-tag:hover{background:var(--black);border-color:var(--black);transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,0.22);}
+.tech-tag img{width:clamp(20px,4vw,24px);height:clamp(20px,4vw,24px);object-fit:contain;}
+.tech-tag .tag-icon{font-size:clamp(1rem,2vw,1.1rem);color:inherit;transition:color 0.3s;}
+.tech-tag span{font-family:'JetBrains Mono',monospace;font-size:clamp(0.7rem,1.5vw,0.8rem);font-weight:600;color:var(--black);transition:color 0.3s;}
+.tech-tag:hover span,.tech-tag:hover .tag-icon{color:var(--white);}
+
+.certs-section{background:var(--off-black);padding:clamp(3rem,8vw,6rem) 6%;}
+.certs-inner{max-width:1320px;margin:0 auto;}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2rem;margin-top:3rem;}
+.cert-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:2rem;display:flex;align-items:flex-start;gap:1.5rem;transition:all 0.3s;}
+.cert-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.3);transform:translateY(-4px);}
+.cert-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.2);font-size:1.5rem;flex-shrink:0;}
+.cert-name{font-family:'Syne',sans-serif;font-size:clamp(0.88rem,1.8vw,0.95rem);font-weight:700;color:var(--white);margin-bottom:0.4rem;}
+.cert-issuer{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;color:var(--grey-400);text-transform:uppercase;}
+
+.global-container{max-width:1320px;margin:0 auto;min-height:70vh;display:flex;align-items:center;justify-content:space-between;gap:clamp(2rem,8vw,5rem);position:relative;flex-wrap:wrap;}
+.global-content{flex:1;z-index:2;min-width:min(100%,400px);}
+.global-badge{font-family:'JetBrains Mono',monospace;font-size:clamp(0.7rem,1.5vw,0.75rem);letter-spacing:0.3em;color:var(--grey-600);margin-bottom:2.5rem;text-transform:uppercase;}
+.global-title{font-family:'Orbitron',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:2rem;letter-spacing:-0.03em;}
+.global-subtitle{font-size:clamp(0.95rem,2vw,1.1rem);color:var(--grey-400);line-height:1.9;max-width:500px;}
+.globe-wrapper{flex:1;position:relative;width:100%;max-width:600px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;}
+#globeCanvas{width:100% !important;height:100% !important;}
+.globe-wrapper::before{content:'';position:absolute;width:70%;height:70%;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);border-radius:50%;z-index:0;animation:glow 4s ease-in-out infinite;}
+@keyframes glow{0%,100%{transform:scale(1);opacity:0.6;}50%{transform:scale(1.1);opacity:0.9;}}
+.global-stats{display:flex;gap:clamp(1rem,3vw,2.5rem);margin-top:3rem;flex-wrap:nowrap;align-items:flex-start;}
+.global-stat-num{font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.5vw,1.5rem);font-weight:700;color:var(--white);line-height:1;margin-bottom:0.4rem;}
+.global-stat-label{font-family:'JetBrains Mono',monospace;font-size:clamp(0.65rem,1.4vw,0.7rem);letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-400);}
+
+.contact-wrap{max-width:1000px;margin:0 auto;text-align:center;}
+.contact-wrap .section-header{text-align:center;}
+.contact-wrap .section-label{justify-content:center;}
+.contact-wrap .section-desc{margin:1.2rem auto 0;}
+.contact-methods{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;}
+.contact-pill{display:inline-flex;align-items:center;gap:0.6rem;padding:0.6rem 1.2rem;border:1px solid rgba(255,255,255,0.2);text-decoration:none;color:var(--grey-200);font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);white-space:nowrap;}
+.contact-pill:hover{border-color:var(--white);background:var(--white);transform:translateY(-5px) scale(1.05);color:var(--black);}
+.contact-pill i{font-size:clamp(1.1rem,2.2vw,1.2rem);transition:color 0.3s;}
+.social-row{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem;}
+.social-ico{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.2);color:var(--grey-400);font-size:clamp(1.1rem,2.2vw,1.2rem);text-decoration:none;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
+.social-ico:hover{background:var(--white);color:var(--black);border-color:var(--white);box-shadow:0 10px 30px rgba(255,255,255,0.15);}
+
+footer{background:var(--off-black);border-top:1px solid rgba(255,255,255,0.1);padding:3rem 6%;text-align:center;}
+.footer-text{font-family:'JetBrains Mono',monospace;font-size:clamp(0.7rem,1.4vw,0.75rem);letter-spacing:0.15em;color:var(--grey-600);text-transform:uppercase;}
+
+.ink-break{width:100%;height:clamp(30px,6vw,50px);overflow:hidden;line-height:0;}
+.ink-break svg{width:100%;height:clamp(30px,6vw,50px);display:block;}
+
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.4,0,0.2,1);}
+.modal-overlay.active{opacity:1;pointer-events:all;}
+.modal-body{max-width:900px;margin:0 auto;padding:clamp(2rem,5vw,5rem) clamp(1.5rem,4vw,4rem);min-height:100vh;}
+.modal-close{position:fixed;top:2rem;right:2rem;width:50px;height:50px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);color:var(--white);font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;z-index:10001;backdrop-filter:blur(10px);}
+.modal-close:hover{background:var(--white);color:var(--black);}
+.modal-tag{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--grey-400);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem;}
+.modal-tag .line{width:30px;height:2px;background:var(--grey-400);}
+.modal-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.8rem,5vw,3.5rem);font-weight:900;color:var(--white);line-height:1.1;text-transform:uppercase;margin-bottom:1.5rem;}
+.modal-subtitle{font-size:clamp(1rem,2vw,1.15rem);color:var(--grey-400);line-height:1.9;margin-bottom:3rem;border-left:3px solid var(--white);padding-left:1.5rem;}
+.modal-metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem;margin-bottom:4rem;}
+.modal-metric{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;text-align:center;}
+.modal-metric-val{font-family:'Orbitron',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:var(--white);}
+.modal-metric-label{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-400);margin-top:0.5rem;}
+.modal-section{margin-bottom:3rem;}
+.modal-section-title{font-family:'Orbitron',sans-serif;font-size:clamp(0.9rem,2vw,1.1rem);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--white);margin-bottom:1.5rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(255,255,255,0.1);}
+.modal-list{list-style:none;display:grid;gap:1rem;}
+.modal-list li{font-size:clamp(0.88rem,1.8vw,0.96rem);color:var(--grey-200);line-height:1.85;padding-left:1.8rem;position:relative;}
+.modal-list li::before{content:'▸';position:absolute;left:0;color:var(--white);}
+.modal-list li strong{color:var(--white);}
+.modal-stack{display:flex;flex-wrap:wrap;gap:0.7rem;}
+.modal-stack-badge{padding:0.5rem 1rem;font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;border:1px solid rgba(255,255,255,0.3);color:var(--grey-200);text-transform:uppercase;}
+.modal-image{width:100%;height:300px;background:linear-gradient(135deg,#111,#1e1e1e);display:flex;align-items:center;justify-content:center;margin-bottom:3rem;border:1px solid rgba(255,255,255,0.1);overflow:hidden;}
+.modal-image img{width:100%;height:100%;object-fit:cover;opacity:0.7;}
+.modal-image-placeholder{color:rgba(255,255,255,0.15);font-family:'Orbitron',sans-serif;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;}
+
+.proj-row-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px rgba(0,0,0,0.18);border-color:var(--black);}
+.proj-row-card:hover img{transform:scale(1.06);filter:grayscale(0);}
+.proj-links{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.2rem;}
+
+@media (max-width:768px){
+  .nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--black);flex-direction:column;padding:6rem 2rem;gap:2rem;transition:right 0.4s;border-left:1px solid rgba(255,255,255,0.1);}
+  .nav-links.active{right:0;}
+  .mobile-toggle{display:block;}
+  .hero{padding:6rem 5% 4rem;}
+  .hero-stats{gap:1.5rem;}
+  .global-container{flex-direction:column;text-align:center;gap:2rem;}
+  .global-subtitle{margin:0 auto;}
+  .exp-header{flex-direction:column;gap:0.8rem;}
+  .project-metrics{grid-template-columns:1fr 1fr;}
+  .modal-close{top:1rem;right:1rem;width:40px;height:40px;}
+  .proj-row-card{flex-direction:column !important;}
+  .proj-row-card > div:first-child{width:100% !important;min-height:180px !important;}
+}
+@media (max-width:480px){
+  .global-stats{flex-wrap:wrap;}
+}
+@media (max-width:480px){
+  nav{padding:1.2rem 5%;}
+  .hero{padding:5rem 5% 3rem;}
+  .section-white,.section-black,.experience-section,.certs-section{padding:3rem 5%;}
+  .projects-grid{gap:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="logo">MANOBHI <span>SRI RAM</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#tech">Tech Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="Manobhi_SriRam_AI_Engineer_Resume.pdf" target="_blank" class="btn btn-white" style="padding:0.5rem 1.2rem;font-size:0.7rem;letter-spacing:0.14em;">Resume <i class="fas fa-download"></i></a>
+    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-container">
+    <div class="hero-badge">
+      <div class="dot"></div>
+      <span>AI Engineer &nbsp;•&nbsp; Agentic AI Systems &nbsp;•&nbsp; LLM Orchestration</span>
+    </div>
+    <h1>Agentic AI<br>Systems That<br><em>Ship to Production</em></h1>
+    <p class="hero-sub">
+      AI Engineer at <strong>Ascendion</strong> — sole AI technical lead on two enterprise platforms serving <strong>5,000+ employees across 12 countries</strong>. Specialising in LangGraph multi-agent orchestration, production RAG pipelines, and LLM evaluation frameworks that catch regressions before they reach users.
+    </p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-white">View My Work <i class="fas fa-arrow-down"></i></a>
+      <a href="#projects" class="btn btn-outline">View Projects <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.15);">Get In Touch <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">5,000+</div>
+        <div class="stat-label">Employees Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Countries Deployed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">300+</div>
+        <div class="stat-label">Coordinator Hrs Saved/Mo</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">13K+</div>
+        <div class="stat-label">Trip Records Vectorised</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--black);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,28 C1300,42 1180,10 1050,30 C900,52 780,8 650,28 C520,48 380,12 250,30 C120,48 60,18 0,32 Z" fill="#0a0a0a"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section style="background:var(--off-black);padding:clamp(3rem,8vw,5rem) 6%;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1320px;margin:0 auto;display:flex;gap:clamp(2rem,6vw,6rem);align-items:flex-start;flex-wrap:wrap;">
+    <div style="flex:1;min-width:min(100%,320px);">
+      <div class="section-label" style="color:var(--grey-400);margin-bottom:1.2rem;"><span class="line"></span> About</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1.5rem,4vw,2.8rem);font-weight:900;color:var(--white);line-height:1.1;text-transform:uppercase;margin-bottom:1.8rem;">The Engineer<br><em style="font-style:italic;font-weight:400;background:linear-gradient(120deg,var(--white),var(--grey-400),var(--white));background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Behind the Systems</em></h2>
+    </div>
+    <div style="flex:2;min-width:min(100%,380px);">
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-200);line-height:1.95;margin-bottom:1.4rem;">
+        I build AI systems that have to work — not demos, not prototypes, not proof-of-concepts that never see users. My focus is on the full stack of production AI: agent orchestration, retrieval quality, evaluation frameworks, and the observability layer that tells you when something breaks before your users do.
+      </p>
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-400);line-height:1.95;margin-bottom:1.4rem;">
+        At Ascendion, I have been the sole AI technical lead on both enterprise platforms — which means I own every decision, from architecture to compliance to the demo in front of directors. That kind of end-to-end ownership is where I do my best work.
+      </p>
+      <p style="font-size:clamp(0.95rem,2vw,1.05rem);color:var(--grey-400);line-height:1.95;">
+        I care deeply about LLM evaluation — not as a checkbox but as an engineering discipline. If a system can hallucinate its way past a user, it is not production-ready. That conviction shows up in every project I ship.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="experience-inner">
+    <div class="section-header">
+      <div class="section-label" style="color:var(--grey-400);"><span class="line"></span> Work Experience</div>
+      <h2 class="section-title" style="color:var(--white);">Production <em>Impact</em></h2>
+      <p class="section-desc" style="color:var(--grey-400);">Real systems. Real users. Measurable outcomes.</p>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">Ascendion</div>
+          <div class="exp-role">AI Engineer — Generative AI & ML | Technical Lead</div>
+        </div>
+        <div class="exp-period">Aug 2025 — Present · Chennai, IN</div>
+      </div>
+
+      <div class="exp-projects">
+        <div>
+          <div class="exp-project-title">Project 1 — Leadership Mobility Command Center (Generative AI + Agentic AI Enterprise Operations)</div>
+          <ul class="exp-bullets">
+            <li><strong>Sole AI technical lead</strong> — led cross-functional coordination across DevOps, IT, driver operations, and executive admin teams across 12 countries; presented live demos to senior directors at every delivery phase.</li>
+            <li>Designed and deployed <strong>LangGraph multi-agent orchestration system</strong> (flight intelligence agent + ground transport agent, shared trip-state memory, autonomous lifecycle management) — replaced all fragmented manual workflows; <strong>now Ascendion's global standard operating platform</strong> for executive mobility across 5,000+ employees.</li>
+            <li>Built <strong>production RAG pipeline</strong> with <strong>LangGraph multi-agent orchestration and AWS Bedrock model routing</strong> (Claude Haiku for lightweight tasks, Claude Sonnet 4.5 for complex reasoning), <strong>AWS Bedrock Titan Embeddings, and Qdrant</strong> vector store on <strong>13,000+ vectorised trip records</strong> — eliminated all manual trip coordination, follow-ups, and status tracking; <strong>300+ coordinator hours saved/month</strong> across all global offices.</li>
+            <li>Integrated <strong>Aviationstack real-time flight telemetry, Google Maps API, Microsoft Teams broadcasting, and Twilio/Firebase GPS sync</strong> — fully autonomous end-to-end operation with <strong>zero manual dispatch since launch</strong>.</li>
+            <li>Implemented <strong>LLMOps in production</strong> with full observability via <strong>Langfuse</strong> for every agent decision, tool call, and state transition.</li>
+          </ul>
+          <div class="exp-metrics">
+            <div class="exp-metric"><div class="exp-metric-val">12</div><div class="exp-metric-label">Countries</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">5,000+</div><div class="exp-metric-label">Employees</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">0</div><div class="exp-metric-label">Manual Dispatch Since Launch</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">300+</div><div class="exp-metric-label">Coordinator Hours Saved/Mo</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">13K+</div><div class="exp-metric-label">Vectorised Trip Records</div></div>
+          </div>
+        </div>
+
+        <div style="padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);">
+          <div class="exp-project-title">Project 2 — Legal Contract Intelligence Platform</div>
+          <ul class="exp-bullets">
+            <li>Reviews contracts in under a minute for <strong>₹4.48 ($0.054)</strong> vs 2–4 hrs of manual review — saves <strong>~₹1,400 per review</strong>. Validated across <strong>150+ real contracts</strong>.</li>
+            <li>Architected a <strong>4-agent AutoGen pipeline</strong> — chosen over LangGraph for true agent-to-agent debate — where <strong>Claude Sonnet 4.5</strong> extracts clauses, <strong>GPT-4o</strong> classifies risk against 47 known patterns, <strong>Gemini 1.5 Pro</strong> flags deviations from standard templates, and <strong>Claude Opus 4.5</strong> synthesises deal-breakers and negotiation priorities into the final report.</li>
+            <li>Extended the pipeline with <strong>Claude/GPT-4o Vision</strong> to pull tables, stamps, and handwritten redlines directly from scanned contract pages.</li>
+            <li>Delivered a <strong>RAG search system</strong> (Milvus, OpenAI embeddings, Cohere reranking) for plain-English queries across the contract library — <strong>34.2% cache hit rate</strong> cut repeat-query cost to near-zero — plus a scheduled agent that checks 5 regulatory sources daily and auto-flags impacted contracts.</li>
+            <li>Exposed the entire system as <strong>4 MCP servers (17 tools)</strong> so it runs natively inside Claude Desktop.</li>
+            <li>Validated reliability pre-launch: <strong>LLM-judge evaluation scored 82.4% accuracy</strong> across 100 CUAD contracts, adversarial red-teaming cut failure rate from <strong>41% to 9%</strong> over 3 rounds — monitored in production via Datadog APM and Langfuse.</li>
+          </ul>
+          <div class="exp-metrics">
+            <div class="exp-metric"><div class="exp-metric-val">&lt; 1 min</div><div class="exp-metric-label">Review Time</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">₹4.48 / $0.054</div><div class="exp-metric-label">Cost Per Review</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">150+</div><div class="exp-metric-label">Contracts Validated</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">82.4%</div><div class="exp-metric-label">LLM Judge Score</div></div>
+            <div class="exp-metric"><div class="exp-metric-val">41%→9%</div><div class="exp-metric-label">Failure Rate, Red-Teamed</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--off-black);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,26 C1280,44 1140,6 980,28 C840,46 700,10 560,30 C420,50 300,8 180,26 C80,40 30,20 0,30 Z" fill="#F5F5F3"/>
+  </svg>
+</div>
+
+<!-- PROJECTS -->
+<section class="section-white" id="projects">
+  <div style="max-width:1320px;margin:0 auto;">
+    <div class="section-header">
+      <div class="section-label"><span class="line"></span> Featured Projects</div>
+      <h2 class="section-title">Systems I've <em>Built</em></h2>
+      <p class="section-desc">Production-grade AI systems with real metrics, real evaluations, and real users.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:2rem;">
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--grey-600);padding-bottom:0.8rem;border-bottom:2px solid rgba(0,0,0,0.12);margin-bottom:0.5rem;">
+      <i class="fas fa-building" style="margin-right:0.6rem;"></i> Production — Ascendion (Enterprise)
+    </div>
+
+    <!-- Project 1: AI Media Intelligence -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="FACEFINDR.jpg" alt="AI Media Intelligence Platform" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-eye"></i> Enterprise AI · Facial Recognition · Vector Search</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">AI Media Intelligence Platform</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">Multi-model facial recognition and semantic vector search platform deployed company-wide at Ascendion — indexes 50K+ enterprise event photos across 1,500+ employees globally, enabling instant identity-based retrieval.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">97.3%</div><div class="proj-metric-label">Accuracy</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">0.4s</div><div class="proj-metric-label">Retrieval (was 8 min)</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">50K+</div><div class="proj-metric-label">Images Indexed</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">94%</div><div class="proj-metric-label">Time Reduction</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">DeepFace</span><span class="tech-badge">FaceNet512</span><span class="tech-badge">RetinaFace</span><span class="tech-badge">Pinecone</span><span class="tech-badge">AWS EC2</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">FastAPI</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="#" class="project-link" onclick="openModal('modal-media');return false;">View Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Mobility Command Center -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="FLIGHT-CAR.jpg" alt="Leadership Mobility Command Center" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-robot"></i> Agentic AI · Multi-Agent · Enterprise Operations</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">Leadership Mobility Command Center</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">LangGraph multi-agent platform for fully autonomous executive travel coordination across 12 countries — tracks live flight telemetry, optimises ground routes, and manages driver dispatch with zero manual intervention.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">12</div><div class="proj-metric-label">Countries</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">0</div><div class="proj-metric-label">Manual Dispatch</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">5,000+</div><div class="proj-metric-label">Employees</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">300+ hrs</div><div class="proj-metric-label">Saved/Month</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">LangGraph</span><span class="tech-badge">Claude 3.5</span><span class="tech-badge">Qdrant</span><span class="tech-badge">LangChain</span><span class="tech-badge">Aviationstack</span><span class="tech-badge">Twilio</span><span class="tech-badge">Langfuse</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="#" class="project-link" onclick="openModal('modal-mobility');return false;">View Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-label: Personal Projects -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--grey-600);padding-bottom:0.8rem;border-bottom:2px solid rgba(0,0,0,0.12);margin:1rem 0 0.5rem;">
+      <i class="fas fa-code" style="margin-right:0.6rem;"></i> Personal Projects
+    </div>
+
+    <!-- Project 3: Legal Contract Intelligence -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="LEGAL-AI.png" alt="Legal Contract Intelligence Platform" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-file-contract"></i> Agentic AI · Multi-Model · MCP Server · LLMOps</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">Legal Contract Intelligence Platform</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">4-agent AutoGen pipeline across 5 LLMs reviews contracts in 47 seconds for ₹4.48 vs 2–4 hours of junior lawyer work. Saves ~₹1,400 per review. Includes MCP servers for Claude Desktop and regulatory compliance monitoring.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">47 sec</div><div class="proj-metric-label">Per Review (was 2–4 hrs)</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">₹4.48</div><div class="proj-metric-label">Cost Per Review</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">82.4%</div><div class="proj-metric-label">LLM Judge Score</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">41%→9%</div><div class="proj-metric-label">Failure Rate (Red-Team)</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">AutoGen</span><span class="tech-badge">Claude Sonnet 4.5</span><span class="tech-badge">GPT-4o</span><span class="tech-badge">Gemini 1.5 Pro</span><span class="tech-badge">MCP Servers</span><span class="tech-badge">Milvus</span><span class="tech-badge">Cohere Rerank</span><span class="tech-badge">Datadog</span><span class="tech-badge">Langfuse</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/manobhisriram/LEGAL-INTEL-AGENT" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+          <a href="#" class="project-link" style="background:transparent;color:var(--black);border:2px solid var(--black);" onclick="openModal('modal-legal');return false;">Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Enterprise AI Decision Intelligence -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="ENTERPRISE-AI-DECISION.png" alt="Enterprise AI Decision Intelligence Platform" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-shield-alt"></i> Agentic AI · Governance · RAG · LLMOps</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">Enterprise AI Decision Intelligence Platform</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">15-step enterprise AI governance pipeline with PII detection, hallucination mitigation, cost routing, and a 3-agent CrewAI debate framework. Saves ~₹1,40,000/year at 2,000 queries/day.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">₹1.4L/yr</div><div class="proj-metric-label">Cost Savings</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">67.3%</div><div class="proj-metric-label">Cache Hit Rate</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">32.9%</div><div class="proj-metric-label">Better Decision Quality</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">84.7%</div><div class="proj-metric-label">Answer Relevance</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">CrewAI</span><span class="tech-badge">LiteLLM</span><span class="tech-badge">Weaviate</span><span class="tech-badge">Cohere Rerank</span><span class="tech-badge">Presidio PII</span><span class="tech-badge">Prometheus</span><span class="tech-badge">Grafana</span><span class="tech-badge">TruLens</span><span class="tech-badge">Langfuse</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/manobhisriram/AI-FINOPS-PLATFORM" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+          <a href="#" class="project-link" style="background:transparent;color:var(--black);border:2px solid var(--black);" onclick="openModal('modal-decision');return false;">Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5: MedAssist -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="MEDASSIST.jpg" alt="MedAssist Clinical Triage Agent" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-heartbeat"></i> Agentic AI · LoRA Fine-Tuning · Local Inference</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">MedAssist — Clinical Triage Agent</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">Local-inference agentic triage for Indian healthcare — symptoms in plain English return source-cited decisions grounded in WHO/ICMR guidelines. Fine-tuned Phi-3 Mini via LoRA. Zero cloud dependency, full audit trail.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">0.92</div><div class="proj-metric-label">Ragas Faithfulness</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">0.85</div><div class="proj-metric-label">Context Precision</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">0.87</div><div class="proj-metric-label">Context Recall</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">30%</div><div class="proj-metric-label">Latency Reduction</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">LangGraph</span><span class="tech-badge">LoRA Fine-Tuning</span><span class="tech-badge">Phi-3 Mini</span><span class="tech-badge">Ollama</span><span class="tech-badge">LanceDB</span><span class="tech-badge">Ragas</span><span class="tech-badge">DeepEval</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/manobhisriram/MEDASSIST-AGENT" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+          <a href="#" class="project-link" style="background:transparent;color:var(--black);border:2px solid var(--black);" onclick="openModal('modal-medassist');return false;">Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 6: Meeting Intelligence -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="AI-MEETING.avif" alt="AI Meeting Intelligence Platform" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-microphone"></i> Agentic AI · SaaS · Multi-Channel Automation</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">AI Meeting Intelligence Platform</h3>
+          <p style="font-size:clamp(0.78rem,1.5vw,0.85rem);color:var(--grey-600);line-height:1.75;margin-bottom:1rem;">Agentic AI system that transcribes meeting audio, extracts structured tasks via LLM chains, retrieves context via RAG, and autonomously routes action items across Slack, Teams, and email.</p>
+          <div class="project-metrics">
+            <div class="proj-metric"><div class="proj-metric-val">~90%</div><div class="proj-metric-label">Task Extraction Accuracy</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">500+</div><div class="proj-metric-label">Tasks Processed</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">&lt;2s</div><div class="proj-metric-label">Inference Latency</div></div>
+            <div class="proj-metric"><div class="proj-metric-val">0</div><div class="proj-metric-label">Manual Follow-Up</div></div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">LangGraph</span><span class="tech-badge">LangChain</span><span class="tech-badge">Groq LLaMA 3</span><span class="tech-badge">Pinecone</span><span class="tech-badge">FastAPI</span><span class="tech-badge">AWS</span><span class="tech-badge">LangSmith</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/manobhisriram/Enterprise-AI-Meeting-IntelligenceSystem" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+          <a href="#" class="project-link" style="background:transparent;color:var(--black);border:2px solid var(--black);" onclick="openModal('modal-meeting');return false;">Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 7: Network Multi-Agent -->
+    <div style="display:flex;background:var(--white);border:1px solid rgba(0,0,0,0.1);overflow:hidden;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);" class="proj-row-card">
+      <div style="width:48%;min-height:260px;flex-shrink:0;overflow:hidden;position:relative;">
+        <img src="Network.webp" alt="Network Troubleshooting Multi-Agent" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);filter:grayscale(0.3);">
+      </div>
+      <div style="flex:1;padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="project-category"><i class="fas fa-network-wired"></i> Multi-Agent · Autonomous Diagnostics · Automation</div>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--black);margin-bottom:0.6rem;line-height:1.3;text-transform:uppercase;">Network Troubleshooting Multi-Agent System</h3>
+          <p style="font-size:0.82rem;color:var(--grey-600);line-height:1.75;margin-bottom:1rem;padding:0.8rem;background:var(--off-white);border-left:3px solid var(--black);">
+            Autonomous multi-agent system where specialised agents collaborate for diagnostics, root-cause analysis, and remediation planning — zero manual intervention across the entire troubleshooting lifecycle.
+          </p>
+          <div class="project-tech">
+            <span class="tech-badge">LangGraph</span><span class="tech-badge">LangChain</span><span class="tech-badge">OpenAI</span><span class="tech-badge">FastAPI</span><span class="tech-badge">Python</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/manobhisriram/NetworkTroubleShooting-MultiAgent" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--off-white);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,26 C1280,44 1140,6 980,28 C840,46 700,10 560,30 C420,50 300,8 180,26 C80,40 30,20 0,30 Z" fill="#000000"/>
+  </svg>
+</div>
+
+<!-- CAPABILITIES -->
+<section class="section-black" id="capabilities">
+  <div style="max-width:1320px;margin:0 auto;">
+    <div class="section-header">
+      <div class="section-label"><span class="line"></span> Expertise</div>
+      <h2 class="section-title">Core <em>Capabilities</em></h2>
+    </div>
+  </div>
+  <div class="capabilities-grid" style="max-width:1320px;margin:0 auto;">
+    <div class="cap-card">
+      <div class="cap-number">01</div>
+      <div class="cap-icon"><i class="fas fa-robot"></i></div>
+      <h3>Agentic AI Systems</h3>
+      <p>LangGraph multi-agent orchestration, stateful agent graphs, conditional routing, human-in-the-loop checkpointing, and autonomous lifecycle management in production.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">02</div>
+      <div class="cap-icon"><i class="fas fa-search"></i></div>
+      <h3>RAG Architecture</h3>
+      <p>Hybrid BM25 + dense retrieval, query decomposition, Reciprocal Rank Fusion, Cohere reranking, contextual compression, and multi-vector search across Pinecone, Qdrant, Milvus, LanceDB, FAISS.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">03</div>
+      <div class="cap-icon"><i class="fas fa-flask"></i></div>
+      <h3>LLM Evaluation & LLMOps</h3>
+      <p>Ragas, DeepEval, TruLens, Langfuse, Datadog, Prometheus, Grafana, Promptfoo, W&B. CI/CD eval gates that block hallucination regressions before production. Evaluation-first development.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">04</div>
+      <div class="cap-icon"><i class="fas fa-plug"></i></div>
+      <h3>MCP Server Development</h3>
+      <p>Built 4 production MCP servers (17 tools) enabling zero-API-knowledge access via Claude Desktop. Rare, current capability that bridges enterprise tools with LLM-native interfaces.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">05</div>
+      <div class="cap-icon"><i class="fas fa-microchip"></i></div>
+      <h3>Fine-Tuning & Adaptation</h3>
+      <p>LoRA/QLoRA fine-tuning for domain adaptation, local inference with Ollama for regulated environments, Hugging Face ecosystem, and quantisation for edge deployment.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">06</div>
+      <div class="cap-icon"><i class="fas fa-cloud"></i></div>
+      <h3>Cloud & Production Infra</h3>
+      <p>AWS (EC2, S3, Bedrock, CloudWatch, IAM), Azure, Docker, CI/CD via GitHub Actions, FastAPI microservices, PostgreSQL, and production ML observability with end-to-end tracing.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">07</div>
+      <div class="cap-icon"><i class="fas fa-random"></i></div>
+      <h3>Multi-Model Orchestration</h3>
+      <p>Cost- and quality-aware routing across Claude, GPT-4o, and Gemini within a single pipeline — AWS Bedrock model routing (Haiku/Sonnet 4.5) for latency-sensitive agentic workflows, and 5-model AutoGen pipelines where each model is used only where it has a genuine advantage.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-number">08</div>
+      <div class="cap-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>AI Safety & Governance</h3>
+      <p>Guardrails, PII detection, and human-in-the-loop escalation built in from day one — AWS Bedrock Guardrails, Presidio PII scanning, adversarial red-teaming, and CI/CD evaluation gates that block any regression below a safety threshold before it reaches production.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--black);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,30 C1350,14 1220,38 1060,22 C900,6 760,44 600,24 C440,4 300,36 160,20 C70,10 20,28 0,18 Z" fill="#F5F5F3"/>
+  </svg>
+</div>
+
+<!-- TECH STACK -->
+<section class="section-white" id="tech">
+  <div class="tech-inner">
+    <div class="section-header">
+      <div class="section-label"><span class="line"></span> Tech Arsenal</div>
+      <h2 class="section-title">Technologies <em>&amp; Tools</em></h2>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-code"></i> Languages</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""><span>Python</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt=""><span>TypeScript</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>SQL</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt=""><span>Java</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-robot"></i> Agentic AI & LLM Frameworks</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><i class="fas fa-project-diagram tag-icon"></i><span>LangGraph</span></div>
+        <div class="tech-tag"><i class="fas fa-link tag-icon"></i><span>LangChain</span></div>
+        <div class="tech-tag"><i class="fas fa-users tag-icon"></i><span>CrewAI</span></div>
+        <div class="tech-tag"><i class="fas fa-cogs tag-icon"></i><span>AutoGen</span></div>
+        <div class="tech-tag"><i class="fas fa-plug tag-icon"></i><span>MCP Servers</span></div>
+        <div class="tech-tag"><i class="fas fa-book tag-icon"></i><span>LlamaIndex</span></div>
+        <div class="tech-tag"><i class="fas fa-search tag-icon"></i><span>RAG Systems</span></div>
+        <div class="tech-tag"><i class="fas fa-pen tag-icon"></i><span>Prompt Engineering</span></div>
+        <div class="tech-tag"><i class="fas fa-check-square tag-icon"></i><span>Pydantic</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-brain"></i> Models & APIs</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><i class="fas fa-circle tag-icon" style="color:#10A37F;"></i><span>OpenAI GPT-4o</span></div>
+        <div class="tech-tag"><i class="fas fa-mountain tag-icon" style="color:#D97757;"></i><span>Anthropic Claude</span></div>
+        <div class="tech-tag"><i class="fas fa-gem tag-icon" style="color:#4285F4;"></i><span>Google Gemini</span></div>
+        <div class="tech-tag"><i class="fas fa-bolt tag-icon"></i><span>Groq LLaMA 3</span></div>
+        <div class="tech-tag"><i class="fas fa-exchange-alt tag-icon"></i><span>LiteLLM</span></div>
+        <div class="tech-tag"><i class="fas fa-home tag-icon"></i><span>Ollama (Local)</span></div>
+        <div class="tech-tag"><i class="fas fa-smile tag-icon"></i><span>Hugging Face</span></div>
+        <div class="tech-tag"><i class="fas fa-cloud tag-icon"></i><span>AWS Bedrock</span></div>
+        <div class="tech-tag"><i class="fas fa-sliders-h tag-icon"></i><span>LoRA / QLoRA</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-database"></i> Vector Search & Databases</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Pinecone</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Qdrant</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Milvus / Zilliz</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Weaviate</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>LanceDB</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>FAISS</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>ChromaDB</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt=""><span>pgvector</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt=""><span>MongoDB</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt=""><span>PostgreSQL</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-flask"></i> LLM Evaluation & Observability</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><i class="fas fa-chart-bar tag-icon"></i><span>Ragas</span></div>
+        <div class="tech-tag"><i class="fas fa-shield-alt tag-icon"></i><span>DeepEval</span></div>
+        <div class="tech-tag"><i class="fas fa-eye tag-icon"></i><span>TruLens</span></div>
+        <div class="tech-tag"><i class="fas fa-eye tag-icon"></i><span>LangSmith</span></div>
+        <div class="tech-tag"><i class="fas fa-eye tag-icon"></i><span>Langfuse</span></div>
+        <div class="tech-tag"><i class="fas fa-code-branch tag-icon"></i><span>Promptfoo</span></div>
+        <div class="tech-tag"><i class="fas fa-fire tag-icon" style="color:#FFBE00;"></i><span>Arize Phoenix</span></div>
+        <div class="tech-tag"><i class="fas fa-weight-hanging tag-icon"></i><span>Weights &amp; Biases</span></div>
+        <div class="tech-tag"><i class="fas fa-code-branch tag-icon"></i><span>MLflow</span></div>
+        <div class="tech-tag"><i class="fas fa-bell tag-icon" style="color:#E6522C;"></i><span>Prometheus</span></div>
+        <div class="tech-tag"><i class="fas fa-chart-line tag-icon"></i><span>Grafana</span></div>
+        <div class="tech-tag"><i class="fas fa-dog tag-icon"></i><span>Datadog</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-cloud"></i> Cloud, Infra & DevOps</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""><span>AWS</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""><span>Azure</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""><span>Docker</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
+        <div class="tech-tag"><i class="fas fa-infinity tag-icon"></i><span>GitHub Actions</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""><span>Linux</span></div>
+        <div class="tech-tag"><i class="fas fa-fire tag-icon"></i><span>Firebase</span></div>
+        <div class="tech-tag"><i class="fas fa-server tag-icon"></i><span>Render</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Neon</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-server"></i> Backend & APIs</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><i class="fas fa-bolt tag-icon" style="color:#009688;"></i><span>FastAPI</span></div>
+        <div class="tech-tag"><i class="fas fa-flask tag-icon"></i><span>Flask</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt=""><span>Node.js</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" style="filter:brightness(0)"><span>Django</span></div>
+        <div class="tech-tag"><i class="fas fa-plug tag-icon"></i><span>REST APIs</span></div>
+        <div class="tech-tag"><i class="fas fa-exchange-alt tag-icon"></i><span>WebSockets</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt=""><span>SQLAlchemy</span></div>
+        <div class="tech-tag"><i class="fas fa-database tag-icon"></i><span>Alembic</span></div>
+      </div>
+    </div>
+
+    <div class="tech-row">
+      <div class="tech-row-label"><i class="fas fa-laptop-code"></i> Frontend (Supporting)</div>
+      <div class="tech-tags">
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""><span>React</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt=""><span>Next.js</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt=""><span>Tailwind</span></div>
+        <div class="tech-tag"><i class="fas fa-chart-bar tag-icon"></i><span>Streamlit</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
+        <div class="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--off-white);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,24 C1300,40 1150,8 990,26 C850,42 710,12 560,28 C410,44 280,10 140,24 C60,32 20,18 0,28 Z" fill="#000000"/>
+  </svg>
+</div>
+
+<!-- CERTIFICATIONS -->
+<section class="certs-section" id="certs" style="overflow:visible;padding-right:8%;">
+  <div class="certs-inner">
+    <div class="section-header">
+      <div class="section-label" style="color:var(--grey-400);"><span class="line"></span> Credentials</div>
+      <h2 class="section-title" style="color:var(--white);">Certifications <em>&amp; Education</em></h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">Azure AI Developer Associate</div>
+          <div class="cert-issuer">Microsoft Certified · 2026</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-aws"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">AWS Certified AI Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services · 2026</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-aws"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services · 2023</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">B.Tech Computer Science & Engineering</div>
+          <div class="cert-issuer">VIT Chennai · CGPA 8.39/10 · 2021–2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--off-black);padding:0;margin:0;line-height:0;overflow:hidden;">
+  <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),rgba(255,255,255,0.9),rgba(255,255,255,0.5),transparent);"></div>
+  <svg viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:50px;">
+    <path d="M0,0 L1440,0 L1440,38 C1320,14 1180,48 1020,28 C870,8 720,46 570,26 C420,6 280,44 140,22 C60,10 10,32 0,24 Z" fill="#000000"/>
+  </svg>
+</div>
+
+<!-- GLOBAL / AVAILABILITY SECTION -->
+<section class="section-black" id="global">
+  <div class="global-container">
+    <div class="global-content">
+      <div class="global-badge">OPEN TO OPPORTUNITIES</div>
+      <h2 class="global-title">Let's Build</h2>
+      <p class="global-subtitle">Production AI systems deployed across 12 countries. Available for on-site, hybrid, or fully remote roles — I adapt to what works best for the team. If the work involves shipping real Agentic AI or LLM-powered products to real users, I want to be part of it.</p>
+      <div class="global-stats">
+        <div>
+          <div class="global-stat-num">On-Site</div>
+          <div class="global-stat-label">Anywhere — Relocation Open</div>
+        </div>
+        <div>
+          <div class="global-stat-num">Hybrid</div>
+          <div class="global-stat-label">Flexible Schedule</div>
+        </div>
+        <div>
+          <div class="global-stat-num">Remote</div>
+          <div class="global-stat-label">Async-Native, Global</div>
+        </div>
+      </div>
+    </div>
+    <div class="globe-wrapper">
+      <canvas id="globeCanvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<div class="ink-break" style="background:var(--black);">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,0 L1440,28 C1300,42 1180,10 1050,30 C900,52 780,8 650,28 C520,48 380,12 250,30 C120,48 60,18 0,32 Z" fill="#F5F5F3"/>
+  </svg>
+</div>
+
+<!-- CONTACT -->
+<section class="section-black" id="contact" style="padding-bottom:3rem;">
+  <div class="contact-wrap">
+    <div class="section-header">
+      <div class="section-label"><span class="line"></span> Contact</div>
+      <h2 class="section-title">Let's Build<br><em>Something Real</em></h2>
+      <p class="section-desc">Looking for roles where evaluation-driven AI engineering is the standard, not the exception. Best fit for teams building production Agentic AI or LLM-powered products that need to work reliably at scale. If hallucination rate, eval pipelines, and production observability matter to your team — that is exactly where I work best.</p>
+    </div>
+    <div class="contact-methods">
+      <a href="mailto:manobhisriram@gmail.com" class="contact-pill">
+        <i class="fas fa-envelope"></i><span>manobhisriram@gmail.com</span>
+      </a>
+      <a href="tel:+919919938589" class="contact-pill">
+        <i class="fas fa-phone"></i><span>+91 99199 38589</span>
+      </a>
+      <a href="https://wa.me/919919938589" class="contact-pill" target="_blank">
+        <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width:1320px;margin:0 auto;">
+    <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+      <a href="#experience" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Experience</a>
+      <a href="#projects" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Projects</a>
+      <a href="#tech" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Tech Stack</a>
+      <a href="#contact" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-600);text-decoration:none;">Contact</a>
+    </div>
+    <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;">
+      <a href="https://github.com/manobhisriram" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:1rem;"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/manobhi-sriram" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:1rem;"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="footer-text">© 2026 Manobhi Sriram — AI Engineer · Agentic AI Systems · LLM Orchestration</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════ -->
+<!-- PROJECT MODALS                      -->
+<!-- ═══════════════════════════════════ -->
+
+<!-- MODAL: Media Intelligence -->
+<div class="modal-overlay" id="modal-media">
+  <button class="modal-close" onclick="closeModal('modal-media')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Enterprise AI · Production · Ascendion</div>
+    <h1 class="modal-title">AI Media Intelligence Platform</h1>
+    <p class="modal-subtitle">Multi-model facial recognition and semantic vector search platform deployed company-wide at Ascendion — indexes enterprise event photos across 1,500+ employees globally, enabling instant identity-based retrieval and replacing an entire manual image processing workforce.</p>
+    <div class="modal-image"><div class="modal-image-placeholder" style="font-size:0.7rem;line-height:1.8;text-align:center;padding:1rem;">Screenshots withheld — proprietary enterprise system.<br>Architecture walkthrough available on request.</div></div>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">97.3%</div><div class="modal-metric-label">Match Accuracy</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0.4s</div><div class="modal-metric-label">Retrieval Time (was 8 min)</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">50K+</div><div class="modal-metric-label">Images Indexed</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">94%</div><div class="modal-metric-label">Processing Time Reduction</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">1,500+</div><div class="modal-metric-label">Employees Using It</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">200+</div><div class="modal-metric-label">Person-Hours Saved/Month</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The Problem</div>
+      <ul class="modal-list">
+        <li>After company events, sorting and distributing 50K+ photos across 1,500+ employees took <strong>13 hours of manual effort</strong> per event — a full team dedicated solely to photo management.</li>
+        <li>No searchable archive existed. Finding a photo of a specific employee from a past event required trawling through thousands of unsorted files.</li>
+        <li>The process was <strong>error-prone, unscalable, and cost hundreds of person-hours per month</strong> across Ascendion's 12-country operation.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">What Was Built</div>
+      <ul class="modal-list">
+        <li><strong>Multi-model facial recognition pipeline:</strong> DeepFace/FaceNet512 for embedding generation, RetinaFace for high-accuracy face detection, MTCNN as fallback for difficult angles and low-light conditions. Adaptive preprocessing handles group photos, varied angles, and poor lighting automatically.</li>
+        <li><strong>Pinecone vector search:</strong> 512-dimensional facial embeddings stored with cosine similarity — sub-second approximate nearest-neighbour search at enterprise scale. Chose Pinecone over pgvector for zero operational overhead and managed indexing.</li>
+        <li><strong>Concurrent batch inference:</strong> ThreadPoolExecutor parallelises multi-image processing — per-event indexing time dropped from hours to minutes. Zero downtime deployment on AWS EC2 with rolling restarts.</li>
+        <li><strong>Privacy-first biometric architecture:</strong> Encrypted inference pipelines, zero persistent selfie storage (embeddings only, never raw biometrics), session-scoped tokens, and RBAC. Designed to pass full enterprise IT security and compliance review from day one.</li>
+        <li><strong>Production observability:</strong> AWS CloudWatch monitors latency per inference call, error rates, batch throughput, and fires alerts on any accuracy degradation.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Results</div>
+      <ul class="modal-list">
+        <li>Post-event processing reduced from <strong>13 hours to 45 minutes</strong> — 94% time reduction.</li>
+        <li>Entire manual image segregation workforce freed for higher-value work.</li>
+        <li>Adopted daily by 1,500+ employees — 200+ person-hours saved per month.</li>
+        <li><strong>97.3% match accuracy</strong> maintained consistently across diverse lighting, angles, and group sizes.</li>
+        <li>First AI system at Ascendion to clear full biometric data governance requirements.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">DeepFace / FaceNet512</span><span class="modal-stack-badge">RetinaFace</span><span class="modal-stack-badge">MTCNN</span><span class="modal-stack-badge">Pinecone</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">AWS EC2</span><span class="modal-stack-badge">AWS S3</span><span class="modal-stack-badge">AWS CloudWatch</span><span class="modal-stack-badge">Docker</span><span class="modal-stack-badge">Python</span><span class="modal-stack-badge">ThreadPoolExecutor</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;padding:1rem 1.5rem;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--grey-400);"><i class="fas fa-lock" style="margin-right:0.6rem;"></i> Codebase is proprietary to Ascendion. Architecture walkthrough available on request.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Mobility Command Center -->
+<div class="modal-overlay" id="modal-mobility">
+  <button class="modal-close" onclick="closeModal('modal-mobility')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Agentic AI · Production · Ascendion · 12 Countries</div>
+    <h1 class="modal-title">Leadership Mobility Command Center</h1>
+    <p class="modal-subtitle">LangGraph multi-agent platform for fully autonomous executive travel coordination across Ascendion's global operations — tracks live flight telemetry, optimises ground routes, broadcasts real-time updates, and manages driver dispatch end-to-end with zero manual intervention. Now Ascendion's global standard operating platform.</p>
+    <div class="modal-image"><div class="modal-image-placeholder" style="font-size:0.7rem;line-height:1.8;text-align:center;padding:1rem;">Screenshots withheld — proprietary enterprise system.<br>Architecture walkthrough available on request.</div></div>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">12</div><div class="modal-metric-label">Countries Deployed</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">5,000+</div><div class="modal-metric-label">Employees Served</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0</div><div class="modal-metric-label">Manual Dispatch Since Launch</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">300+</div><div class="modal-metric-label">Coordinator Hours Saved/Month</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">13,000+</div><div class="modal-metric-label">Trip Records Vectorised</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">100%</div><div class="modal-metric-label">Autonomous End-to-End</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The Problem</div>
+      <ul class="modal-list">
+        <li>Executive mobility across 12 countries involved fragmented manual coordination — email, phone, WhatsApp, and spreadsheets with no single source of truth for trip state.</li>
+        <li>Real-time flight changes weren't being propagated to ground transport teams in time, causing missed pickups and delays.</li>
+        <li>300+ coordinator hours per month spent on a process that was fundamentally automatable.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">What Was Built</div>
+      <ul class="modal-list">
+        <li><strong>LangGraph multi-agent system:</strong> Two specialised agents — Flight Intelligence Agent (monitors live telemetry, detects delays, recalculates ETAs) and Ground Transport Agent (optimises routes, dispatches drivers, manages real-time updates). Shared trip-state memory graph ensures both agents always operate on consistent state.</li>
+        <li><strong>Autonomous lifecycle management:</strong> The agent graph owns the complete trip from departure to arrival. No human touches routine trips. Human-in-the-loop only triggered for exceptional events (cancelled flights, driver unavailability).</li>
+        <li><strong>Production RAG pipeline:</strong> LangChain + Claude 3.5 Sonnet + Qdrant on 13,000+ vectorised trip records — handles context retrieval, executive preference matching, and conversational Q&A over historical trip data.</li>
+        <li><strong>Real-time integrations:</strong> Aviationstack live flight telemetry, Google Maps route optimisation, Microsoft Teams broadcasting for ETA notifications, and Twilio/Firebase GPS sync with driver mobile app.</li>
+        <li><strong>Full LLMOps:</strong> Langfuse traces every agent decision, tool call, state transition, and LLM inference — enabling root-cause analysis for any trip anomaly and satisfying enterprise audit requirements.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Results</div>
+      <ul class="modal-list">
+        <li>Replaced fragmented manual coordination with <strong>zero human intervention</strong> — fully autonomous since launch.</li>
+        <li>Adopted as <strong>Ascendion's global standard platform for executive mobility</strong> across all 12 countries.</li>
+        <li>300+ coordinator hours saved per month. Zero missed pickups attributable to tracking failures since deployment.</li>
+        <li>Full auditability of every trip decision via Langfuse — satisfying enterprise governance requirements.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">LangGraph</span><span class="modal-stack-badge">LangChain</span><span class="modal-stack-badge">Claude 3.5 Sonnet</span><span class="modal-stack-badge">Qdrant</span><span class="modal-stack-badge">Aviationstack API</span><span class="modal-stack-badge">Google Maps API</span><span class="modal-stack-badge">Microsoft Teams API</span><span class="modal-stack-badge">Twilio</span><span class="modal-stack-badge">Firebase</span><span class="modal-stack-badge">Langfuse</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">AWS</span><span class="modal-stack-badge">Docker</span><span class="modal-stack-badge">Python</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;padding:1rem 1.5rem;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--grey-400);"><i class="fas fa-lock" style="margin-right:0.6rem;"></i> Codebase is proprietary to Ascendion. Architecture walkthrough available on request.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Legal Contract Intelligence -->
+<div class="modal-overlay" id="modal-legal">
+  <button class="modal-close" onclick="closeModal('modal-legal')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Agentic AI · Multi-Model · MCP Server Development · LLMOps</div>
+    <h1 class="modal-title">Legal Contract Intelligence Platform</h1>
+    <p class="modal-subtitle">A 4-agent AutoGen pipeline across 5 LLMs that reviews any contract in 47 seconds for ₹4.48 ($0.054) — replacing 2–4 hours of junior lawyer work worth ~₹1,400 per review. Includes 4 MCP servers for Claude Desktop and daily regulatory compliance monitoring across Indian and EU sources.</p>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">47 sec</div><div class="modal-metric-label">Per Review (was 2–4 hrs)</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">₹4.48</div><div class="modal-metric-label">Cost Per Review ($0.054)</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">₹1,400</div><div class="modal-metric-label">Savings Per Review</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">82.4%</div><div class="modal-metric-label">LLM Judge Overall Score</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">41%→9%</div><div class="modal-metric-label">Failure Rate After Red-Teaming</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The Problem</div>
+      <ul class="modal-list">
+        <li>Contract review is one of the most time-consuming, repetitive tasks in legal work. A junior lawyer spends 2–4 hours per contract at ~₹1,400 per review — and most of that time is pattern recognition that AI can do better.</li>
+        <li>No single LLM has the context window, domain breadth, and specialised capabilities needed for full contract analysis — this demanded a multi-model architecture where each model does what it does best.</li>
+        <li>Legal teams and non-technical users needed a way to query contracts without writing API calls or prompts — which is exactly what MCP servers solve.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">What Was Built</div>
+      <ul class="modal-list">
+        <li><strong>4-agent AutoGen pipeline across 5 LLMs:</strong> Claude Sonnet 4.5 handles clause extraction (structured output), GPT-4o runs risk classification against a 47-pattern risk library, Gemini 1.5 Pro handles template comparison using its 1M token context window, and Claude Opus 4.5 synthesises the final report. Claude Vision + GPT-4o fallback extracts tables, stamps, handwritten annotations, and redlines from the first 20 pages.</li>
+        <li><strong>Production RAG on Milvus/Zilliz Cloud:</strong> 3 collections, OpenAI text-embedding-3-small embeddings, Cohere rerank-v3.0 (top-20 to top-5, +17.7% NDCG@5), Groq Llama3 for fast lookups, 34.2% cache hit rate.</li>
+        <li><strong>Regulatory compliance monitoring:</strong> APScheduler with SHA-256 hashing monitors 5 Indian and EU regulatory sources daily. When regulations change, the system automatically maps compliance gaps to active contracts.</li>
+        <li><strong>4 MCP servers (17 tools):</strong> Enables zero-API-knowledge contract querying via Claude Desktop. Non-technical legal staff can ask natural language questions about contracts without writing a single line of code.</li>
+        <li><strong>LLM Judge evaluation:</strong> 82.4% overall score on 100 CUAD contracts — correctness 88.7%, calibration 80.5%, completeness 79.3%, actionability 81.2%.</li>
+        <li><strong>Red-teaming:</strong> 3 iterations of adversarial testing reduced failure rate from 41% to 9% across 5 attack categories including prompt injection, hallucination fishing, and context manipulation.</li>
+        <li><strong>Full LLMOps:</strong> Datadog (ddtrace, LLMSpan APM, 40+ DogStatsD metrics, structlog) + Langfuse prompt replay. FastAPI (15 routes), PostgreSQL/Neon (8 tables, async SQLAlchemy + Alembic), Streamlit frontend, Docker Compose, Render deployment, 46 pytest functions with full LLM API mocking.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Why Multi-Model</div>
+      <ul class="modal-list">
+        <li>Claude Sonnet 4.5 excels at structured extraction — it reliably outputs consistent JSON clause data.</li>
+        <li>GPT-4o's function calling is the best in class for complex pattern matching against the 47-risk library.</li>
+        <li>Gemini 1.5 Pro's 1M context window is essential for comparing long contracts against full template libraries without chunking.</li>
+        <li>Claude Opus 4.5 produces the most coherent, well-reasoned synthesis reports for legal professionals.</li>
+        <li>Each model is used only where it has a genuine advantage — cost is kept to ₹4.48 ($0.054) per review as a result.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">AutoGen</span><span class="modal-stack-badge">Claude Sonnet 4.5</span><span class="modal-stack-badge">Claude Opus 4.5</span><span class="modal-stack-badge">GPT-4o</span><span class="modal-stack-badge">Gemini 1.5 Pro</span><span class="modal-stack-badge">Claude Vision</span><span class="modal-stack-badge">MCP Servers (4)</span><span class="modal-stack-badge">Milvus / Zilliz Cloud</span><span class="modal-stack-badge">OpenAI Embeddings</span><span class="modal-stack-badge">Cohere Rerank v3.0</span><span class="modal-stack-badge">Groq Llama3</span><span class="modal-stack-badge">Datadog</span><span class="modal-stack-badge">Langfuse</span><span class="modal-stack-badge">APScheduler</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">PostgreSQL / Neon</span><span class="modal-stack-badge">Docker</span><span class="modal-stack-badge">Render</span><span class="modal-stack-badge">Streamlit</span><span class="modal-stack-badge">Python</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="https://github.com/manobhisriram/LEGAL-INTEL-AGENT" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Enterprise AI Decision Intelligence -->
+<div class="modal-overlay" id="modal-decision">
+  <button class="modal-close" onclick="closeModal('modal-decision')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Agentic AI · Governance · RAG · LLMOps · Enterprise</div>
+    <h1 class="modal-title">Enterprise AI Decision Intelligence Platform</h1>
+    <p class="modal-subtitle">A 15-step enterprise AI governance pipeline that handles PII detection, hallucination mitigation, intelligent cost routing, and a 3-agent CrewAI debate framework for complex queries. Saves ~₹1,40,000/year at 2,000 queries/day through smart model routing and semantic caching.</p>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">₹1,40,000</div><div class="modal-metric-label">Saved Per Year</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">67.3%</div><div class="modal-metric-label">Cache Hit Rate</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">+29.5%</div><div class="modal-metric-label">Quality After Reranking</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">32.9%</div><div class="modal-metric-label">Better Decision Quality</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">+71.4%</div><div class="modal-metric-label">Opposing Perspective Coverage</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">84.7%</div><div class="modal-metric-label">RAG Answer Relevance</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The Problem</div>
+      <ul class="modal-list">
+        <li>Enterprises running AI at scale face three compounding problems: <strong>runaway costs</strong> (routing every query through the most powerful model), <strong>compliance risk</strong> (PII leaking into LLM prompts), and <strong>hallucination</strong> (especially on complex, contested queries where a single model picks a side).</li>
+        <li>Existing solutions address one problem at a time. This platform addresses all three in a unified pipeline.</li>
+        <li>At 2,000 queries/day without intelligent routing, an organisation pays ~₹1,40,000/year more than necessary — simply by using Opus when Haiku would suffice.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The 15-Step Pipeline</div>
+      <ul class="modal-list">
+        <li><strong>Step 1 — PII Detection:</strong> Presidio scans every query for Aadhaar numbers, PAN cards, phone numbers, and email addresses before they touch any LLM API. Violations are redacted and flagged.</li>
+        <li><strong>Steps 2–3 — Query Classification:</strong> Groq classifies complexity (simple/medium/complex), risk level, and debate-worthiness — guaranteed JSON output with retry on malformed responses.</li>
+        <li><strong>Step 4 — Semantic Cache:</strong> Weaviate semantic cache (0.92 similarity threshold) checks if a near-identical query was answered recently — 67.3% hit rate eliminates most repeated LLM calls entirely.</li>
+        <li><strong>Steps 5–6 — Guardrails & Governance:</strong> Pattern-based guardrail matching for policy violations, then human-in-the-loop review for flagged queries.</li>
+        <li><strong>Steps 7–8 — RAG Retrieval:</strong> Groq query rewriting for retrieval optimisation, then Weaviate hybrid BM25 + vector search (top-10 candidates).</li>
+        <li><strong>Step 9 — Reranking:</strong> Cohere reranking narrows to top-5 most relevant chunks — +29.5% quality improvement over unranked retrieval.</li>
+        <li><strong>Steps 10–11 — Intelligent Routing:</strong> LiteLLM routes to Haiku (₹0.08), Sonnet (₹0.52), or Opus (₹2.31) based on complexity classification, with auto-fallback. Long-term user memory is injected for personalised context.</li>
+        <li><strong>Step 12 — 3-Agent Debate (for contested queries):</strong> Claude Sonnet (Advocate) argues the strongest case for one position, GPT-4o (Critic) rigorously challenges it, and Gemini 1.5 Pro (Judge, 3 tools) delivers the balanced final verdict. Eliminates single-model bias — 32.9% better decision quality vs single-model baseline.</li>
+        <li><strong>Steps 13–15 — Output, Audit & Observability:</strong> Permanent audit trail in PostgreSQL, Langfuse per-stage tracing, and Prometheus metrics for the Grafana dashboard.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Evaluation Results</div>
+      <ul class="modal-list">
+        <li><strong>TruLens RAG Triad:</strong> Answer relevance 84.7%, context relevance 79.1%, groundedness 82.3%.</li>
+        <li><strong>Decision quality:</strong> 32.9% improvement over single-model on complex queries; +71.4% improvement in opposing-perspective consideration.</li>
+        <li><strong>Promptfoo regression testing</strong> ensures no pipeline change degrades output quality below baseline.</li>
+        <li><strong>Prometheus + Grafana 8-panel dashboard</strong> monitors cost per query, cache hit rate, PII detection rate, model distribution, and latency percentiles in real time.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">CrewAI</span><span class="modal-stack-badge">Claude Sonnet</span><span class="modal-stack-badge">GPT-4o</span><span class="modal-stack-badge">Gemini 1.5 Pro</span><span class="modal-stack-badge">LiteLLM</span><span class="modal-stack-badge">Weaviate</span><span class="modal-stack-badge">Cohere Rerank</span><span class="modal-stack-badge">Presidio PII</span><span class="modal-stack-badge">Groq</span><span class="modal-stack-badge">Langfuse</span><span class="modal-stack-badge">Prometheus</span><span class="modal-stack-badge">Grafana Cloud</span><span class="modal-stack-badge">TruLens</span><span class="modal-stack-badge">Promptfoo</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">PostgreSQL / Neon</span><span class="modal-stack-badge">Unstructured</span><span class="modal-stack-badge">Docker</span><span class="modal-stack-badge">Render</span><span class="modal-stack-badge">Streamlit</span><span class="modal-stack-badge">Python</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="https://github.com/manobhisriram/AI-FINOPS-PLATFORM" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: MedAssist -->
+<div class="modal-overlay" id="modal-medassist">
+  <button class="modal-close" onclick="closeModal('modal-medassist')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Agentic AI · LoRA Fine-Tuning · Local Inference · Healthcare</div>
+    <h1 class="modal-title">MedAssist — Clinical Triage Agent</h1>
+    <p class="modal-subtitle">Production-grade local-inference agentic triage for regulated Indian healthcare environments where patient data cannot leave institutional servers. Accepts symptoms in plain English and returns fully explainable triage decisions with severity classification, red flag warnings, drug interaction checks, and citations traceable to WHO and ICMR guidelines.</p>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">0.92</div><div class="modal-metric-label">Ragas Faithfulness</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0.90</div><div class="modal-metric-label">Answer Relevancy</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0.85</div><div class="modal-metric-label">Context Precision</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0.87</div><div class="modal-metric-label">Context Recall</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">1.92→1.21</div><div class="modal-metric-label">LoRA Training Loss</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">~30%</div><div class="modal-metric-label">Latency Reduction</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">The Problem</div>
+      <ul class="modal-list">
+        <li>Indian healthcare environments with strict data governance cannot send patient data to cloud LLM APIs — ruling out GPT-4o, Claude, or Gemini for any patient-facing triage.</li>
+        <li>Generic LLMs have poor clinical domain knowledge and zero awareness of Indian ICMR protocols.</li>
+        <li>Existing triage tools produce black-box outputs — no explainability, no source citations, no audit trail for regulatory review.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">What Was Built</div>
+      <ul class="modal-list">
+        <li><strong>LoRA fine-tuning:</strong> Phi-3 Mini 3.8B fine-tuned on 15,000 medical QA examples from ChatDoctor-HealthCareMagic-100k using LoRA (r=4, alpha=8). Training loss dropped from 1.921 to 1.219 — genuine clinical domain adaptation. Runs fully on Ollama — patient data never leaves the server.</li>
+        <li><strong>5-node LangGraph agent pipeline:</strong> SymptomParser → SeverityAssessor → ClinicalRetriever → DrugChecker → TriageDecision. Every node has typed Pydantic v2 schema validation — malformed outputs trigger auto-retry (max 3) rather than silently failing.</li>
+        <li><strong>Conditional routing for speed:</strong> HIGH/EMERGENCY severity triggers parallel OpenFDA drug lookup. LOW/MEDIUM severity skips it — ~30% latency reduction without sacrificing safety for critical cases.</li>
+        <li><strong>Hybrid RAG on LanceDB (fully local):</strong> Semantic chunking with all-MiniLM-L6-v2 (cosine similarity 0.75) + full-text search with custom RRF fusion across 65 WHO/ICMR documents and live OpenFDA API. Context precision improved from 0.65 to 0.85 vs fixed chunking baseline.</li>
+        <li><strong>Safety-critical CI/CD:</strong> GitHub Actions eval gate in every PR — any push degrading faithfulness below 0.60 or causing severity misclassification is blocked. Treated as a patient safety gate, not a performance benchmark.</li>
+        <li><strong>Full Langfuse audit trail:</strong> Every triage decision logged with full reasoning chain for regulatory review.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Evaluation Results</div>
+      <ul class="modal-list">
+        <li><strong>Faithfulness 0.92</strong> — answers are grounded in retrieved WHO/ICMR context, not hallucinated.</li>
+        <li><strong>Answer Relevancy 0.90</strong> — responses directly address the clinical question asked.</li>
+        <li><strong>Context Precision 0.85</strong> — retrieved chunks are relevant (up from 0.65 with fixed chunking).</li>
+        <li><strong>Context Recall 0.87</strong> — relevant clinical context is not missed during retrieval.</li>
+        <li><strong>5/5 DeepEval assertion tests passed</strong> on the full clinical QA evaluation set.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">LangGraph</span><span class="modal-stack-badge">Phi-3 Mini 3.8B</span><span class="modal-stack-badge">LoRA Fine-Tuning</span><span class="modal-stack-badge">Ollama (Local)</span><span class="modal-stack-badge">LanceDB</span><span class="modal-stack-badge">Hybrid Retrieval + RRF</span><span class="modal-stack-badge">Ragas</span><span class="modal-stack-badge">DeepEval</span><span class="modal-stack-badge">GitHub Actions</span><span class="modal-stack-badge">Langfuse</span><span class="modal-stack-badge">OpenFDA API</span><span class="modal-stack-badge">Pydantic v2</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">Streamlit</span><span class="modal-stack-badge">Hugging Face</span><span class="modal-stack-badge">Python</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="https://github.com/manobhisriram/MEDASSIST-AGENT" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Meeting Intelligence -->
+<div class="modal-overlay" id="modal-meeting">
+  <button class="modal-close" onclick="closeModal('modal-meeting')"><i class="fas fa-times"></i></button>
+  <div class="modal-body">
+    <div class="modal-tag"><span class="line"></span> Agentic AI · Production SaaS · Multi-Channel Automation</div>
+    <h1 class="modal-title">AI Meeting Intelligence Platform</h1>
+    <p class="modal-subtitle">Agentic AI system that transcribes meeting audio, extracts structured tasks via LLM chains, retrieves context via RAG, and autonomously routes action items across Slack, Teams, and email — eliminating all manual post-meeting follow-up.</p>
+    <div class="modal-metrics-grid">
+      <div class="modal-metric"><div class="modal-metric-val">~90%</div><div class="modal-metric-label">Task Extraction Accuracy</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">500+</div><div class="modal-metric-label">Tasks Processed</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">&lt;2s</div><div class="modal-metric-label">Inference Latency</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">3</div><div class="modal-metric-label">RAG Use Cases</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">0</div><div class="modal-metric-label">Manual Follow-Up Required</div></div>
+      <div class="modal-metric"><div class="modal-metric-val">Multi</div><div class="modal-metric-label">Channel Routing</div></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">What Was Built</div>
+      <ul class="modal-list">
+        <li><strong>LangGraph multi-agent with conditional state-based routing:</strong> Agent graph dynamically selects notification channels (Slack, Teams, email) based on task priority, employee context, and meeting state. All routing decisions are LLM-driven — no hardcoded workflow logic.</li>
+        <li><strong>LangChain + Groq (LLaMA 3) extraction chains:</strong> Structured output parsers extract task owner, deadline, priority, and dependencies — ~90% task extraction accuracy across 500+ tasks. Async chain execution keeps latency below 2 seconds.</li>
+        <li><strong>Three RAG use cases on Pinecone:</strong> (1) Semantic transcript search across all past meetings. (2) Conversational Q&A over meeting history. (3) Cross-meeting duplicate task detection — prevents the same action item being assigned twice.</li>
+        <li><strong>Priority-based routing:</strong> HIGH priority tasks go to Slack and email; MEDIUM tasks to Slack only; LOW tasks batched into a daily digest — reduces notification fatigue while ensuring nothing is missed.</li>
+        <li><strong>LLM evaluation via LangSmith:</strong> Faithfulness, relevancy, and extraction accuracy tracked per pipeline run, not just at launch.</li>
+        <li><strong>Enterprise-ready API:</strong> CRM-ready FastAPI design enables enterprise drop-in deployment with zero pipeline restructuring.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-stack">
+        <span class="modal-stack-badge">LangGraph</span><span class="modal-stack-badge">LangChain</span><span class="modal-stack-badge">Groq LLaMA 3</span><span class="modal-stack-badge">Pinecone</span><span class="modal-stack-badge">Whisper (Transcription)</span><span class="modal-stack-badge">FastAPI</span><span class="modal-stack-badge">AWS</span><span class="modal-stack-badge">LangSmith</span><span class="modal-stack-badge">Slack API</span><span class="modal-stack-badge">Teams API</span><span class="modal-stack-badge">Pydantic</span><span class="modal-stack-badge">Python</span><span class="modal-stack-badge">React (Dashboard)</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="https://github.com/manobhisriram/Enterprise-AI-Meeting-IntelligenceSystem" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+  const scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  scrollProgress.style.width=(scrollTop/scrollHeight*100)+'%';
+});
+
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.pageYOffset>80);});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',e=>{
+    const href=anchor.getAttribute('href');
+    if(href==='#')return;
+    const target=document.querySelector(href);
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('navLinks').classList.remove('active');}
+  });
+});
+
+document.getElementById('mobileToggle').addEventListener('click',()=>{
+  const links=document.getElementById('navLinks');
+  links.classList.toggle('active');
+  const icon=document.querySelector('#mobileToggle i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
+});
+
+function openModal(id){
+  const m=document.getElementById(id);
+  m.classList.add('active');
+  document.body.style.overflow='hidden';
+  m.scrollTop=0;
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('active');
+  document.body.style.overflow='';
+}
+document.querySelectorAll('.modal-overlay').forEach(m=>{
+  m.addEventListener('click',e=>{if(e.target===m)closeModal(m.id);});
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.active').forEach(m=>closeModal(m.id));}});
+
+const heroCanvas=document.getElementById('hero-canvas');
+if(heroCanvas&&typeof THREE!=='undefined'){
+  try{
+    const scene=new THREE.Scene();
+    const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+    const renderer=new THREE.WebGLRenderer({canvas:heroCanvas,alpha:true,antialias:true});
+    renderer.setSize(window.innerWidth,window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    camera.position.z=5;
+    const dotCanvas=document.createElement('canvas');
+    dotCanvas.width=16;dotCanvas.height=16;
+    const ctx2d=dotCanvas.getContext('2d');
+    const grad=ctx2d.createRadialGradient(8,8,0,8,8,8);
+    grad.addColorStop(0,'rgba(255,255,255,1)');
+    grad.addColorStop(0.4,'rgba(255,255,255,0.8)');
+    grad.addColorStop(1,'rgba(255,255,255,0)');
+    ctx2d.fillStyle=grad;
+    ctx2d.beginPath();ctx2d.arc(8,8,8,0,Math.PI*2);ctx2d.fill();
+    const dotTex=new THREE.CanvasTexture(dotCanvas);
+    const geo=new THREE.BufferGeometry();
+    const count=window.innerWidth<768?500:1000;
+    const pos=new Float32Array(count*3);
+    for(let i=0;i<count*3;i++)pos[i]=(Math.random()-0.5)*20;
+    geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    const mat=new THREE.PointsMaterial({size:0.06,map:dotTex,color:0xffffff,transparent:true,opacity:0.45,sizeAttenuation:true,depthWrite:false,alphaTest:0.01});
+    const mesh=new THREE.Points(geo,mat);
+    scene.add(mesh);
+    function animHero(){requestAnimationFrame(animHero);mesh.rotation.y+=0.0002;mesh.rotation.x+=0.00008;renderer.render(scene,camera);}
+    animHero();
+    window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
+  }catch(e){console.log('Hero canvas error:',e);}
+}
+
+const gCanvas=document.getElementById('globeCanvas');
+if(gCanvas&&typeof THREE!=='undefined'){
+  const gScene=new THREE.Scene();
+  const gCamera=new THREE.PerspectiveCamera(45,1,0.1,1000);
+  const isMobile=window.innerWidth<768;
+  gCamera.position.z=isMobile?5:4.2;
+  const gRenderer=new THREE.WebGLRenderer({canvas:gCanvas,alpha:true,antialias:true});
+  const updateGlobeSize=()=>{
+    const w=document.querySelector('.globe-wrapper');
+    const size=w?w.offsetWidth:600;
+    gRenderer.setSize(size,size);
+    gRenderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  };
+  updateGlobeSize();
+  gScene.add(new THREE.AmbientLight(0xffffff,0.5));
+  const sun=new THREE.DirectionalLight(0xffffff,1.2);
+  sun.position.set(5,3,5);
+  gScene.add(sun);
+  const loader=new THREE.TextureLoader();
+  const earth=new THREE.Mesh(
+    new THREE.SphereGeometry(1,64,64),
+    new THREE.MeshPhongMaterial({map:loader.load('https://raw.githubusercontent.com/turban/webgl-earth/master/images/2_no_clouds_4k.jpg'),shininess:15})
+  );
+  gScene.add(earth);
+  const atm=new THREE.Mesh(
+    new THREE.SphereGeometry(1.08,64,64),
+    new THREE.ShaderMaterial({
+      vertexShader:`varying vec3 vNormal;void main(){vNormal=normalize(normalMatrix*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
+      fragmentShader:`varying vec3 vNormal;void main(){float intensity=pow(0.6-dot(vNormal,vec3(0.0,0.0,1.0)),2.0);gl_FragColor=vec4(0.2,0.6,1.0,1.0)*intensity;}`,
+      blending:THREE.AdditiveBlending,side:THREE.BackSide,transparent:true
+    })
+  );
+  gScene.add(atm);
+  const starsGeo=new THREE.BufferGeometry();
+  const starCount=isMobile?1500:2500;
+  const starPos=[];
+  for(let i=0;i<starCount;i++){
+    const r=50+Math.random()*200;
+    const t=Math.random()*Math.PI*2;
+    const p=Math.random()*Math.PI;
+    starPos.push(r*Math.sin(p)*Math.cos(t),r*Math.sin(p)*Math.sin(t),r*Math.cos(p));
+  }
+  starsGeo.setAttribute('position',new THREE.Float32BufferAttribute(starPos,3));
+  gScene.add(new THREE.Points(starsGeo,new THREE.PointsMaterial({color:0xffffff,size:isMobile?0.06:0.08,sizeAttenuation:true,transparent:true,opacity:0.85,depthWrite:false})));
+  function animGlobe(){requestAnimationFrame(animGlobe);earth.rotation.y+=0.002;gRenderer.render(gScene,gCamera);}
+  animGlobe();
+  window.addEventListener('resize',()=>{updateGlobeSize();gCamera.position.z=window.innerWidth<768?5:4.2;});
+}
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity='1';
+      entry.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.exp-card,.project-card,.cap-card,.cert-card,.tech-row,.proj-row-card').forEach(el=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(30px)';
+  el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
